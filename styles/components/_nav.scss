@@ -17,7 +17,7 @@ video {
   display: block;
   width: 220px;
   height: 100%;
-  background-image: url('~/assets/images/logo-main.svg');
+  background-image: url('/images/logo-main.svg');
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
@@ -153,7 +153,7 @@ video {
 .header .menu>ul>li .menu-subs .arrow {
   position: absolute;
 
-  background-image: url('~/assets/images/icons/menu-arrow.svg');
+  background-image: url('/images/icons/menu-arrow.svg');
   background-repeat: no-repeat;
   background-size: cover;
 

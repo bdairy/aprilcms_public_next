@@ -1,7 +1,9 @@
 import { PagesService } from '@/shared/services/pages.service';
-import Image from 'next/image'
 
-export default async function Home() {
+
+export default async function Home({ params }: { params: { codes: string[] } }) {
+  const codes = params.codes;
+  console.log(codes);
   const service = new PagesService();
   const page = await service.getPageByCode('home');
   return (
