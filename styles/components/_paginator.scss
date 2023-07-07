@@ -1,0 +1,42 @@
+.paginator {
+  width: 100%;
+  height: 30px;
+  @apply flex flex-row gap-4 items-center justify-start;
+
+  div {
+    position: relative;
+    a {
+
+      @apply text-greydark-500 text-[16px] cursor-pointer;
+
+      &.current {
+        @apply text-primary-500 cursor-auto;
+
+      }
+
+    }
+
+    &::after {
+      content: ' ';
+      width: 2px;
+      height: 13px;
+      position: absolute;
+      display: inline-block;
+      margin: 0 4px;
+      top: 6px;
+
+      @apply bg-greydark-800 left-[10px] rtl:left-auto rtl:right-[10px]
+    }
+
+
+    &:last-child {
+
+        &::after {
+          display: none;
+        }
+
+    }
+  }
+
+
+}

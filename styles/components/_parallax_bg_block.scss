@@ -1,0 +1,12 @@
+.parallax-block {
+  @apply h-72 w-full bg-cover bg-center
+  flex flex-col items-center justify-center py-6 shadow-inner my-4
+  bg-no-repeat;
+  h2.title{
+    @apply text-white text-4xl mb-5 drop-shadow-md backdrop-blur-sm;
+  }
+   .body{
+    @apply text-white drop-shadow-md backdrop-blur-sm text-center  overflow-hidden;
+    max-width: 66%;
+  }
+}

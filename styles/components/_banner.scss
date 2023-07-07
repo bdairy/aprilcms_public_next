@@ -1,0 +1,74 @@
+@tailwind utilities;
+
+
+.home-banner {
+  position: relative;
+  height: calc(100vh - 82px);
+  width: 100wh;
+
+
+
+  .content-holder {
+    @apply flex flex-col justify-end items-start sm:pb-48 absolute;
+    bottom: 0%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    .slide-content {
+      @apply w-1/2 opacity-100;
+
+      h2 {
+        // font-size: 2rem;
+        // color: #fff;
+        animation: fadeInDown;
+        animation-duration: 2s;
+        animation-delay: 0s;
+        @apply text-7xl text-white font-bold mb-4;
+      }
+
+      p {
+        @apply hidden md:block;
+        font-size: 1rem;
+        color: #fff;
+        animation: fadeInDown;
+        animation-duration: 2s;
+        animation-delay: 0s;
+      }
+    }
+  }
+
+
+  video,
+  img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+    height: calc(100vh - 82px);
+    width: 100%;
+  }
+
+  .banner-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: transparent linear-gradient(179deg, #000 0%, #FFFFFF 100%) 0% 0% no-repeat padding-box;
+    background: transparent linear-gradient(179deg, #000000 0%, #FFFFFF 100%) 0% 0% no-repeat padding-box;
+    mix-blend-mode: multiply;
+    opacity: 0.72;
+    height: calc(100vh - 82px);
+    width: 100%;
+
+
+
+  }
+
+  .owl-dots {
+    position: absolute;
+    z-index: 10000;
+    bottom: 15px;
+    margin: auto;
+    left: 50%;
+  }
+}

@@ -1,0 +1,44 @@
+.our-schools {
+  @apply flex flex-col items-center justify-center gap-8 my-36;
+
+  .title {
+    h2 {
+      font-size: 60px;
+      font-weight: bold;
+     @apply tracking-[-3px] rtl:tracking-normal;
+      line-height: 0.95;
+      margin-bottom: 37px;
+    }
+  }
+
+  .images {
+
+    @apply flex flex-row justify-between w-full;
+
+    .image {
+      @apply relative;
+      width: 517px;
+      aspect-ratio:  1.4;
+      img{
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+
+      }
+      .overlay{
+        background: transparent linear-gradient(0deg, rgba(0,0,0,0.1) 0%, #00000000 100%) 0% 0% no-repeat padding-box;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        @apply flex flex-col items-start justify-end;
+        .text{
+          @apply text-white font-bold text-2xl p-6;
+        }
+
+      }
+
+    }
+  }
+}

@@ -1,0 +1,25 @@
+.training-achievements {
+  height: 460px;
+  width: 100%;
+  @apply flex flex-col items-start justify-center bg-no-repeat;
+  background-size: 100%;
+
+
+  .title {
+    h2 {
+      font-size: 60px;
+      font-weight: bold;
+     @apply tracking-[-3px] rtl:tracking-normal;
+      line-height: 0.95;
+      margin-bottom: 37px;
+      color: #fff;
+    }
+  }
+
+  .link {
+    @apply text-white border-white border-2
+    flex flex-row items-center justify-around
+     px-10 py-5 cursor-pointer w-80;
+  }
+
+}

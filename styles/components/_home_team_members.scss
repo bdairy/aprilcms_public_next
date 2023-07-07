@@ -1,0 +1,36 @@
+.home-team-members{
+  @apply my-8;
+
+  .title {
+    @apply w-full text-2xl flex flex-row justify-between items-start mb-4;
+
+    a {
+      @apply text-primary-500 text-sm;
+    }
+  }
+  .content{
+    @apply sm:h-72 h-auto w-full flex flex-row sm:flex-nowrap flex-wrap;
+    .team-member-card{
+      @apply flex-initial  sm:w-1/6 w-1/2 mx-0 my-4 h-full  sm:mx-4 flex flex-col justify-start items-center;
+      &:first-child{
+        @apply sm:ml-0;
+      }
+      &:last-child{
+        @apply sm:mr-0;
+      }
+      .avatar{
+        border-radius: 50%;
+        @apply w-24 h-24 bg-no-repeat bg-cover  transition-all duration-700 opacity-60;
+        &.ng-lazyloaded {
+          opacity: 1;
+        }
+      }
+      .name{
+        @apply  font-semibold text-center;
+      }
+      .position{
+        @apply text-sm font-light text-center;
+      }
+    }
+  }
+}

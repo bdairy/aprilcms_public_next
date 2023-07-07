@@ -1,0 +1,77 @@
+.contact-cards {
+  @apply flex sm:flex-row sm:justify-between gap-16 flex-col sm:translate-y-[-50%] mb-32 sm:mb-0;
+
+  .contact-card {
+    background-color: #fff;
+    box-shadow: 0px 10px 30px #4B2D2F1A;
+    @apply sm:w-[50%] w-full h-[312px] p-11 flex flex-col gap-8;
+
+    .group {
+      @apply flex flex-col items-start justify-start gap-2;
+
+      &.single {
+        @apply gap-8;
+      }
+
+      .title {
+        @apply text-2xl text-black font-bold max-w-xs;
+      }
+
+      .value {
+        @apply text-xl text-black;
+      }
+    }
+
+  }
+}
+
+.contact-details {
+  @apply flex flex-col mb-32;
+
+  .title {
+    font-size: 60px;
+    font-weight: bold;
+    @apply tracking-[-3px] rtl:tracking-normal;
+    line-height: 0.95;
+    margin-bottom: 37px;
+  }
+
+  .form-wrapper {
+    @apply flex sm:flex-row flex-col sm:justify-between sm:items-center sm:h-[492px] h-auto w-full gap-8 sm:gap-0;
+
+    .contact-form {
+
+      @apply flex flex-col gap-3 sm:h-full sm:w-[35%] w-full justify-center;
+
+      input,
+      textarea {
+        @apply h-[55px] w-full bg-beige-500 text-greydark-500 outline-none border-none text-[16px] px-4 py-5;
+
+        &.invalid {
+          @apply border border-solid border-red-500;
+        }
+      }
+
+      textarea {
+        @apply h-32;
+      }
+
+      button {
+        @apply h-[55px] w-full bg-primary-500 text-white outline-none border-none text-[16px] px-4 py-5;
+
+        &.disabled {
+          @apply bg-gray-200 cursor-default;
+        }
+      }
+    }
+
+    app-map-card {
+      @apply sm:w-[60%] w-full sm:h-full h-[300px];
+
+      .contact-map {
+        @apply h-full w-full bg-beige-500;
+
+      }
+    }
+  }
+}

@@ -1,0 +1,69 @@
+.service-card {
+  @apply py-12 mb-40 sm:h-[560px] h-auto;
+  .card-wrapper {
+    @apply flex h-full w-full flex-col  items-center justify-between  sm:flex-row mx-auto   ;
+
+
+    .image {
+      @apply sm:w-[420px] sm:h-[420px] w-full h-[300px] translate-y-0 sm:translate-y-[-40%];
+      background-repeat: no-repeat;
+      background-size: cover;
+
+
+
+    }
+
+    .content-wrapper {
+      @apply sm:w-[55%] h-full relative my-10;
+
+      .index {
+        @apply absolute top-[5.5rem] left-0 rtl:left-auto rtl:right-0 p-6 text-[336px] font-bold text-beige-500 z-0;
+        line-height: 0;
+        letter-spacing: -16.8px;
+        block-size: fit-content;
+      }
+
+      .content {
+
+        @apply flex flex-col h-full   items-start sm:justify-center justify-start;
+
+
+
+        .title {
+          z-index: 10;
+
+          h2 {
+
+            font-size: 60px;
+            font-weight: bold;
+           @apply tracking-[-3px] rtl:tracking-normal;
+            line-height: 0.95;
+            margin-bottom: 37px;
+          }
+        }
+
+        p {
+          @apply text-greydark-500 text-[16px] z-10;
+          letter-spacing: 0;
+        }
+
+      }
+    }
+
+
+
+  }
+
+  &.even {
+    @apply  bg-beige-500;
+    .card-wrapper{
+      @apply sm:flex-row-reverse;
+        .content-wrapper {
+          .index {
+            @apply text-white;
+          }
+
+        }
+      }
+  }
+}

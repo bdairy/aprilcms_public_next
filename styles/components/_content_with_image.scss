@@ -1,0 +1,231 @@
+.image-content {
+  @apply flex flex-col sm:flex-row mx-auto items-center;
+
+  height: 651px;
+  width: 100%;
+
+  &.sliced{
+    height: 874px;
+    .content{
+      h2{
+        width: 300px;
+      }
+    }
+  }
+
+  &.text-on-the-left{
+    @apply sm:flex-row-reverse;
+  }
+
+
+  .image {
+    width: 50%;
+    height: auto;
+    position: relative;
+
+    .top-right {
+      height: 15%;
+      width: 50%;
+      position: absolute;
+      right: 0px;
+      top: 0px;
+      background-color: #Fff;
+    }
+
+    .center-full {
+      width: 30px;
+      height: 100%;
+      left: calc(50% - 15px);
+      background-color: #Fff;
+      top: 0px;
+      position: absolute;
+    }
+
+    .center-left {
+      width: 50%;
+      height: 30px;
+      top: calc(50% - 15px);
+      background-color: #Fff;
+      left: 0px;
+      position: absolute;
+    }
+
+    .bottom-left {
+      height: 15%;
+      width: 50%;
+      position: absolute;
+      left: 0px;
+      bottom: 0px;
+      background-color: #Fff;
+    }
+
+    img {
+
+      width: 420px;
+      height: 420px;
+
+      &.sliced {
+        width: auto;
+        height: 655px;
+      }
+
+    }
+  }
+
+  .content {
+    width: 50%;
+    @apply md:w-1/2 h-full flex flex-col my-16 px-4 md:p-12 items-start md:justify-center justify-start;
+
+    h2 {
+
+      font-size: 60px;
+      font-weight: bold;
+
+      @apply tracking-[-3px] rtl:tracking-normal;
+      line-height: 0.95;
+      margin-bottom: 37px;
+    }
+
+    p {
+      letter-spacing: 0;
+    }
+    ul {
+
+      li{
+        @apply text-greydark-500 text-xl;
+      &::before {
+        content: "\2022";  /* Add content: \2022 is the CSS Code/unicode for a bullet */
+       @apply text-primary-500; /* Change the color */
+        font-weight: bold; /* If you want it to be bold */
+        display: inline-block; /* Needed to add space between the bullet and the text */
+        width: 1em; /* Also needed for space (tweak if needed) */
+        margin-left: -1em; /* Also needed for space (tweak if needed) */
+      }
+      }
+  }
+  }
+}
+
+
+
+.apple {
+  @apply bg-black;
+
+  .image-content {
+    .image {
+      >div {
+        @apply bg-black;
+      }
+
+      .center-left {
+        top: calc(50% + 30px)
+      }
+
+    }
+
+    .content {
+
+      *,
+      .content>span p {
+        @apply text-white;
+      }
+
+      h2 {
+        width: 575px;
+        margin-bottom: 0;
+      }
+
+      .apple-logo {
+        margin: 48px 0;
+      }
+    }
+  }
+}
+
+.apple-intro{
+  .content{
+    p{
+      @apply text-greydark-500 text-[16px]
+    }
+  }
+}
+
+@media (max-width: 640px) {
+  .image-content {
+    height: auto;
+    margin: 70px 0;
+
+    .image {
+      min-width: 100% !important;
+      height: 300px;
+      @apply px-4;
+
+
+      img {
+
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+
+      }
+    }
+
+    .content {
+      width: 100%;
+
+      h2 {
+        width: 100%;
+
+      }
+
+      p {
+        width: 100%;
+      }
+    }
+    &.sliced{
+      height: auto;
+      .image {
+        min-width: 100% !important;
+        height: 300px;
+        @apply px-4;
+
+
+        img {
+
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+
+        }
+      }
+
+      .content {
+        width: 100%;
+
+        h2 {
+          width: 100%;
+
+        }
+
+        p {
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  .apple {
+    padding-bottom: 1px;
+
+    .image-content {
+      h2 {
+        width: 100% !important;
+      }
+    }
+  }
+
+}
+
+.big-text .image-content{
+  height: auto !important;
+}

@@ -1,0 +1,83 @@
+.statistics {
+  height: 600px;
+  @apply bg-beige-500;
+
+
+
+  .wrapper {
+    @apply flex flex-col justify-start sm:flex-row sm:justify-around items-center w-full h-full;
+
+    app-stat-element {
+      @apply sm:w-1/5 flex flex-col justify-center items-center gap-6 w-full;
+
+      .title {
+        @apply text-greydark-500;
+        font-size: 20px;
+        text-align: center;
+      }
+
+      .value {
+        @apply text-black text-7xl font-bold;
+       @apply tracking-[-3px] rtl:tracking-normal;
+        text-align: center;
+      }
+
+      .desc {
+        font-size: 20px;
+        text-align: center;
+        height: 90px;
+        vertical-align: text-top;
+      }
+    }
+  }
+
+}
+
+.training-statistics {
+  @apply flex flex-col pt-24 bg-beige-500 justify-center items-center;
+  .wrapper{
+    .title{
+      text-align: center;
+      h2 {
+        font-size: 60px;
+        font-weight: bold;
+       @apply tracking-[-3px] rtl:tracking-normal;
+        line-height: 0.95;
+        margin-bottom: 37px;
+      }
+    }
+  }
+  .statistics {
+    height: 400px;
+    .wrapper {
+      app-stat-element{
+      .title {
+        display: none;
+      }
+    }
+    }
+  }
+}
+
+
+@media (max-width: 640px) {
+  .statistics {
+    height: auto;
+    @apply py-8;
+
+    app-stat-element {
+      margin-top: 64px;
+
+      .desc {
+        height: auto !important;
+
+      }
+    }
+  }
+
+  .training-statistics {
+    .statistics{
+      height: auto;
+    }
+  }
+}

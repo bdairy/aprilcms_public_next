@@ -1,0 +1,133 @@
+.training-services {
+  height: 600px;
+  @apply bg-beige-500 py-20 mb-36;
+
+
+
+  &.only-services {
+
+    height: auto;
+    @apply bg-transparent py-0 my-36;
+
+    &.acheivements {
+      @apply bg-beige-500 my-0 py-36;
+    }
+
+    .wrapper {
+      @apply mt-0;
+
+
+      .data {
+        @apply mt-0;
+
+        .content {
+          &.active {
+            @apply bg-beige-500;
+          }
+        }
+      }
+
+    }
+  }
+
+  .wrapper {
+    @apply flex h-full flex-col mx-auto items-center justify-center mt-24;
+
+    .title {
+      width: auto;
+
+      h2 {
+        font-size: 60px;
+        font-weight: bold;
+       @apply tracking-[-3px] rtl:tracking-normal;
+        line-height: 0.95;
+        margin-bottom: 37px;
+      }
+    }
+
+    .content {
+
+
+      p {
+
+        @apply text-justify text-xl text-greydark-500;
+      }
+    }
+
+    .data {
+      @apply flex-grow flex flex-row flex-wrap gap-4 sm:gap-0 sm:justify-between mt-20;
+
+      .content {
+        width: 23%;
+        aspect-ratio: 1.07;
+        background: #FFFFFF 0% 0% no-repeat padding-box;
+        box-shadow: 0px 10px 30px #4B2D2F1A;
+
+        @apply bg-white text-2xl text-black p-9 cursor-pointer hover:bg-beige-200 flex flex-col justify-between items-start relative;
+
+        .text {
+          @apply flex flex-row items-end justify-between w-full;
+
+          h3 {
+            width: 90%;
+          }
+
+          img {
+            width: 14px;
+            height: 14px;
+            @apply rtl:rotate-180;
+          }
+        }
+
+        .corner {
+
+          width: 55px;
+          height: 55px;
+          background-repeat: no-repeat;
+          background-size: contain;
+        }
+
+      }
+    }
+  }
+
+}
+
+
+@media (max-width: 640px) {
+  .training-services {
+    height: auto;
+    @apply my-0 py-4;
+
+    .wrapper {
+      @apply mt-4;
+
+      .title {
+        width: 100%;
+
+        h2 {
+          text-align: center;
+        }
+      }
+
+      .content {
+        width: 100%;
+
+      }
+
+      .data {
+        @apply mb-16;
+
+        .content {
+          width: 100%;
+          aspect-ratio: unset;
+
+          &.even {
+            transform: unset;
+          }
+        }
+      }
+    }
+
+  }
+}

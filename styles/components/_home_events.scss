@@ -1,0 +1,135 @@
+@tailwind utilities;
+
+
+.home-events {
+  @apply my-8;
+
+  .title {
+    @apply w-full text-2xl flex flex-row justify-between;
+
+    a {
+      @apply text-primary-500 text-sm;
+    }
+
+
+  }
+
+  .cards {
+    margin: 16px 0;
+
+    @apply flex sm:flex-row flex-col gap-4 sm:h-96 h-auto ;
+
+    .hero {
+      @apply flex-initial w-full sm:w-1/2 h-96 cursor-pointer   transition-transform duration-700 overflow-hidden;
+
+      .bg-wrapper {
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        @apply w-full h-full transition-all duration-700 opacity-60;
+        &.ng-lazyloaded {
+          opacity: 1;
+        }
+        .content {
+          @apply w-full h-full flex flex-col justify-end items-start px-4 pb-4;
+          .date{
+            @apply font-bold text-lg text-white;
+          }
+
+          h2 {
+            @apply text-lg text-white font-semibold text-ellipsis transition-all duration-700;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: initial;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+          }
+
+          .intro {
+            @apply text-sm text-white font-light h-0 transition-max-height max-h-0 duration-700;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: initial;
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+
+          }
+        }
+      }
+
+      &:hover {
+        .bg-wrapper {
+          @apply scale-125;
+
+          .content {
+            @apply backdrop-brightness-50 transition-all duration-700;
+            transform: scale(calc(1/$bgScale));
+
+
+            .intro {
+              @apply max-h-64 h-auto;
+              // transform: scale(calc(1/$bgScale))
+
+            }
+          }
+        }
+      }
+
+    }
+
+    .small-cards {
+      @apply flex flex-col justify-between gap-4 sm:w-1/2 h-full w-full;
+
+      .small-card {
+        @apply w-full h-20 cursor-pointer;
+
+        .event-wrapper {
+          @apply flex flex-row;
+
+          .img {
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            @apply flex-initial w-1/5 h-full mx-2 transition-opacity opacity-60 duration-700;
+            &.ng-lazyloaded {
+              opacity: 1;
+            }
+          }
+          .content{
+            @apply flex-initial  w-3/5 h-full m-2 flex-col gap-2 justify-start items-start;
+            h2 {
+              @apply text-lg text-black font-semibold text-ellipsis transition-all duration-700;
+              overflow: hidden;
+              text-overflow: ellipsis;
+              white-space: initial;
+              display: -webkit-box;
+              -webkit-line-clamp: 2;
+              -webkit-box-orient: vertical;
+            }
+
+           p {
+              @apply text-sm text-gray-500 font-light overflow-hidden ;
+                text-overflow: ellipsis;
+              white-space: initial;
+              display: -webkit-box;
+              -webkit-line-clamp:1;
+              -webkit-box-orient: vertical;
+            }
+          }
+          .date{
+            @apply flex-initial w-1/5 flex flex-col justify-center items-center font-bold text-xl;
+
+          }
+        }
+      }
+    }
+
+
+  }
+
+
+
+
+}

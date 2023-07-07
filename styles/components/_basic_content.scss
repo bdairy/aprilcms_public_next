@@ -1,0 +1,13 @@
+.basic-content{
+  @apply mb-20;
+  .title{
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 66px;
+  }
+  .body{
+    @apply text-greydark-500 text-xl;
+    letter-spacing: 0;
+    margin-bottom: 32px;
+  }
+}
