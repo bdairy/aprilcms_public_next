@@ -4,10 +4,10 @@ import { ApiService } from "./api.service";
 export class MenuService{
 
   root = 'menus'
-  async getMainMenu(): Promise<IMenuItem[]|null> {
+  async getMainMenu(locale: string): Promise<IMenuItem[]|null> {
     try {
       const api = new ApiService();
-      const result = await api.getData(`${this.root}`);
+      const result = await api.getData(`${this.root}`, { 'Accept-Language': locale});
       if (result) {
         const menu = MenuItem.fromEntityListResult(result.items);
         return menu;

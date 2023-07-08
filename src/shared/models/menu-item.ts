@@ -60,7 +60,8 @@ export class MenuItem {
         result.push(MenuItem.fromEntityResult(element));
       });
     }
-    console.log(result);
+
+
     return result;
   }
   constructor() {}

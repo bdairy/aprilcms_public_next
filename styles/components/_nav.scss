@@ -113,8 +113,15 @@ video {
   -o-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
 
-  ion-icon {
-    transform: translateY(3px);
+  .down_arrow {
+    width: 13px;
+    height: 10px;
+    display: inline-block;
+    background-repeat: no-repeat;
+    -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+    margin: 0 3px;
+    background-image: url('/images/icons/chev_down_black.svg');
   }
 }
 
@@ -123,6 +130,9 @@ video {
 }
 .header .menu>ul>li:has(a.active)> a {
   @apply text-primary-500;
+  .down_arrow{
+    background-image: url('/images/icons/chev_down.svg');
+  }
 }
 
 .header .menu>ul>li .menu-subs {
@@ -280,6 +290,9 @@ video {
 .header-item-right a:hover,
 .header .menu>ul>li:hover>a {
   @apply text-primary-500 cursor-pointer;
+  .down_arrow{
+    background-image: url('/images/icons/chev_down.svg');
+  }
 }
 
 @media only screen and (min-width: 993px) {
