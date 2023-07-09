@@ -1,5 +1,7 @@
-import  Link  from 'next-intl/link';
+'use client';
+import Link from 'next-intl/link';
 import { ISection } from '../models/page/section.model';
+import { motion } from 'framer-motion';
 
 export default function BasicContent(params: {
   section: ISection;
@@ -15,7 +17,10 @@ export default function BasicContent(params: {
   }
 
   return (
-    <div className="basic-content container">
+    <motion.div
+    initial={{ opacity: 0, translateY: 50 }}
+    whileInView={{ opacity: 1, translateY: 0 }}
+    transition={{ duration: 0.6 }} className="basic-content container">
       {hasTitle && <h2 className="title">{section.data?.title}</h2>}
 
       <div className="body" dangerouslySetInnerHTML={{ __html: section.data!.body ?? '' }}></div>
@@ -24,6 +29,6 @@ export default function BasicContent(params: {
           {section.data?.linkTitle}
         </Link>
       )}
-    </div>
+    </motion.div>
   );
 }

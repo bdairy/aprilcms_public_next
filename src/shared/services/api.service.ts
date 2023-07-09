@@ -7,7 +7,7 @@ export class ApiService {
 
 
     try {
-      const result = await fetch(`${this.root}/${url}`, {cache: 'no-store', headers: options });
+      const result = await fetch(`${this.root}${url}`, {cache: 'no-store', headers: options });
 
       const res = await result.json();
       return res;
