@@ -1,4 +1,3 @@
-import { LanguageObject } from '../language-object.model';
 import { ISectionMedia, SectionMedia } from './section-media.model';
 
 export interface ISectionData {

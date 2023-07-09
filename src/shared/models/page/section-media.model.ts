@@ -1,4 +1,3 @@
-import { LanguageObject } from '../language-object.model';
 
 export interface ISectionMedia {
   banner: string | null,

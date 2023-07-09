@@ -1,9 +1,10 @@
 import { IPage } from '@/shared/models/page/page.model';
 import MainBanner from '../main-banner';
 import { Fragment } from 'react';
+import ContentComponent from './content-component';
 
 export default function PageSections(params: { page: IPage; locale: string, codes: string[] }) {
-  const { locale, page } = params;
+  const { locale, page, codes } = params;
   let sections: any[] = [];
   page.sections.forEach((section) => {
     let element: {id: string, element: any};
@@ -13,7 +14,7 @@ export default function PageSections(params: { page: IPage; locale: string, code
         break;
 
       default:
-        element = { id: section.id, element: section.data?.title };
+        element = { id: section.id, element: <ContentComponent codes={codes} locale={locale} section={section} key={section.id} /> };
         break;
     }
 

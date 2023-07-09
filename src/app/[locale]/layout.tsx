@@ -6,7 +6,7 @@ import Nav from '@/shared/components/nav';
 import { notFound } from 'next/navigation';
 import { MenuService } from '@/shared/services/menu.service';
 
-const inter = Inter({ subsets: ['latin'] });
+
 
 export const metadata = {
   title: {
@@ -32,7 +32,7 @@ export  default  function RootLayout({
   //const menu = await service.getMainMenu(locale);
   return (
     <html lang={locale}>
-      <body className={inter.className} dir={locale === 'en' ? 'ltr' : 'rtl'}>
+      <body dir={locale === 'en' ? 'ltr' : 'rtl'}>
 
        {children}
       </body>

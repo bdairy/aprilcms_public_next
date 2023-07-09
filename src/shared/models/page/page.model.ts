@@ -1,11 +1,11 @@
-import { LanguageObject } from '../language-object.model';
+
 import { IMetaTags, MetaTags } from './meta-tags.model';
-import { ISectionMedia, SectionMedia } from './section-media.model';
+import { ISectionMedia } from './section-media.model';
 import { ISection, Section } from './section.model';
 
 export interface Page {
   id: string;
-  title: LanguageObject;
+  title: string;
   state: string;
   metaTags: IMetaTags;
   media: ISectionMedia;
