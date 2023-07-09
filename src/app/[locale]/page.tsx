@@ -1,3 +1,4 @@
+import PageSections from '@/shared/components/main/page-sections';
 import Nav from '@/shared/components/nav';
 import { MenuService } from '@/shared/services/menu.service';
 import { PagesService } from '@/shared/services/pages.service';
@@ -14,14 +15,10 @@ export default async function Home({ params }: { params: { locale: string, codes
     <Fragment>
       <Nav menu={menu ?? []} locale={params.locale}></Nav>
       <div className="master-container">
-        <main>
-          <h2>{page?.title}</h2>
-          <ul>
-            {page?.sections.map((sec) => (
-              <li key={sec.id}>{sec.component ?? 'No Component'}</li>
-            ))}
-          </ul>
-        </main>
+
+           <PageSections  page={page!} locale={params.locale} codes={['']} />
+
+
       </div>
     </Fragment>
   )

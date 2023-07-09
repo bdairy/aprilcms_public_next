@@ -1,3 +1,4 @@
+import PageSections from '@/shared/components/main/page-sections';
 import Nav from '@/shared/components/nav';
 import { MenuService } from '@/shared/services/menu.service';
 import { PagesService } from '@/shared/services/pages.service';
@@ -44,17 +45,13 @@ export default async function Inner({ params }: { params: { locale: string; code
 
   return (
     <Fragment>
-      <Nav menu={menu ?? []} locale={params.locale}></Nav>
-      <div className="master-container">
-        <main>
-          <h2>{page?.title}</h2>
-          <ul>
-            {page?.sections.map((sec) => (
-              <li key={sec.id}>{sec.component ?? 'No Component'}</li>
-            ))}
-          </ul>
-        </main>
-      </div>
-    </Fragment>
+    <Nav menu={menu ?? []} locale={params.locale}></Nav>
+    <div className="master-container">
+
+         <PageSections  page={page!} locale={params.locale} codes={params.codes} />
+
+
+    </div>
+  </Fragment>
   );
 }

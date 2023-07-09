@@ -9,6 +9,7 @@ const nextConfig = {
     includePaths: [path.join(__dirname, 'styles')],
   },
 
+
 };
 
 module.exports = withNextIntl(nextConfig);
