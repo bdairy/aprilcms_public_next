@@ -1,6 +1,7 @@
 import { ISection } from '@/shared/models/page/section.model';
 import ContentWithImage from '../content-with-image';
 import BasicContent from '../basic-content';
+import WhereWeInvest from '../where-we-invest';
 
 export default function ContentComponent(params: {
   section: ISection;
@@ -37,6 +38,11 @@ export default function ContentComponent(params: {
     case 'achievements_certifi':
       element = (
         <ContentWithImage section={section} textPosition={'start'} locale={locale} codes={codes} />
+      );
+      break;
+    case 'where_we_invest':
+      element = (
+        <WhereWeInvest section={section}  locale={locale} codes={codes} />
       );
       break;
 

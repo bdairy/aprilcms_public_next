@@ -21,6 +21,7 @@ export default function PageSections(params: { page: IPage; locale: string; code
           ),
         };
         break;
+
       default:
         element = {
           id: section.id,
