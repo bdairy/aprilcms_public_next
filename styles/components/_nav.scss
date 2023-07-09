@@ -482,6 +482,20 @@ video {
     display: block;
   }
 
+  .header .menu .menu-mobile-header.active .menu-mobile-arrow.back{
+    background-image: url('/images/icons/chev-back.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 20%;
+  }
+
+  [dir="rtl"]{
+    .header .menu .menu-mobile-header.active .menu-mobile-arrow.back{
+      background-image: url('/images/icons/chev-forward.svg');
+
+    }
+  }
+
   .header .menu .menu-mobile-header .menu-mobile-title {
     font-family: inherit;
     font-size: 1rem;
@@ -501,6 +515,10 @@ video {
     border-left: 1px solid rgba(0, 0, 0, 0.1);
     color: #121212;
     text-align: center;
+    background-image: url('/images/icons/close.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 20%;
   }
 
   .header .menu .menu-section {
