@@ -1,6 +1,8 @@
 {
   "Index": {
-    "title": "Hello world!",
-    "language": "عربي"
+    "latest-news": "Latest Updates",
+    "language": "عربي",
+    "view-all": "View all"
   }
+
 }

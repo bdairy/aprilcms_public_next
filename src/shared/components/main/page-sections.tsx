@@ -3,6 +3,7 @@ import MainBanner from '../main-banner';
 import { Fragment } from 'react';
 import ContentComponent from './content-component';
 import StatisticsComponent from '../statistics/statistics';
+import LatestUpdates from '../latest-updates/latest-updates';
 
 export default function PageSections(params: { page: IPage; locale: string; codes: string[] }) {
   const { locale, page, codes } = params;
@@ -18,6 +19,14 @@ export default function PageSections(params: { page: IPage; locale: string; code
           id: section.id,
           element: (
             <StatisticsComponent locale={locale} page={page} classes={''}></StatisticsComponent>
+          ),
+        };
+        break;
+      case 'latest-updates':
+        element = {
+          id: section.id,
+          element: (
+            <LatestUpdates locale={locale} classes={''} />
           ),
         };
         break;
