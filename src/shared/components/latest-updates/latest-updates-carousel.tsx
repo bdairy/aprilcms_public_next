@@ -4,7 +4,7 @@ import { INewsItem } from '@/shared/models/news-item';
 // import { Carousel as CarouselFlowbite } from 'flowbite-react';
 import LatestUpadtesCard from './latest-updates-card';
 import { Carousel, CarouselItem } from '../carsoul';
-import Slider from 'react-slick-pnth';
+import Slider from 'react-slick';
 
 export default function LatestUpdatesCarousel(params: { news: INewsItem[]; locale: string }) {
   const { news } = params;

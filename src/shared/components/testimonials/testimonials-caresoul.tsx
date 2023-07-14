@@ -1,7 +1,7 @@
 'use client';
 import { ITestimonial } from '@/shared/models/testimonial.model';
 import { Carousel, CarouselItem } from '../carsoul';
-import Slider from 'react-slick-pnth';
+import Slider from 'react-slick';
 import TestimonialItem from './testimonials-item';
 
 export default function TestimonialsCaresoul(params: { items: ITestimonial[], locale: string }) {
