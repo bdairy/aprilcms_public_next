@@ -2,6 +2,7 @@ import { ISection } from '@/shared/models/page/section.model';
 import ContentWithImage from '../content-with-image';
 import BasicContent from '../basic-content';
 import WhereWeInvest from '../where-we-invest';
+import AppleLearningProvider from '../apple-learning-provider';
 
 export default function ContentComponent(params: {
   section: ISection;
@@ -43,6 +44,11 @@ export default function ContentComponent(params: {
     case 'where_we_invest':
       element = (
         <WhereWeInvest section={section}  locale={locale} codes={codes} />
+      );
+      break;
+    case 'apple_professional_learning_provider':
+      element = (
+        <AppleLearningProvider section={section}  locale={locale}  />
       );
       break;
 

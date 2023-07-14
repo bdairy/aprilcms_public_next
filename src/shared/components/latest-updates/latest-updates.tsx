@@ -15,7 +15,7 @@ export default async function LatestUpdates(params: { locale: string; classes: s
           <div className="wrapper container">
             <LatestUpdatesHeader></LatestUpdatesHeader>
             <div className="cards">
-              <LatestUpdatesCarousel news={newsItems}></LatestUpdatesCarousel>
+              <LatestUpdatesCarousel news={newsItems} locale={params.locale}></LatestUpdatesCarousel>
             </div>
           </div>
         </Fragment>

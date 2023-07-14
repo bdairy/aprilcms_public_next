@@ -4,6 +4,7 @@ import { Fragment } from 'react';
 import ContentComponent from './content-component';
 import StatisticsComponent from '../statistics/statistics';
 import LatestUpdates from '../latest-updates/latest-updates';
+import TestimonialsSection from '../testimonials/testimonials-section';
 
 export default function PageSections(params: { page: IPage; locale: string; codes: string[] }) {
   const { locale, page, codes } = params;
@@ -27,6 +28,14 @@ export default function PageSections(params: { page: IPage; locale: string; code
           id: section.id,
           element: (
             <LatestUpdates locale={locale} classes={''} />
+          ),
+        };
+        break;
+      case 'testimonials':
+        element = {
+          id: section.id,
+          element: (
+            <TestimonialsSection locale={locale} page={page} section={section} />
           ),
         };
         break;

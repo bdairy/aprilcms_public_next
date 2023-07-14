@@ -1,5 +1,5 @@
 // Carousel.tsx
-import React, { CSSProperties } from 'react';
+import React, { CSSProperties, Fragment } from 'react';
 import { useSnapCarousel } from 'react-snap-carousel';
 
 const styles = {
@@ -50,7 +50,7 @@ export const Carousel = <T extends any>({ items, renderItem }: CarouselProps<T>)
   const { scrollRef, pages, activePageIndex, prev, next, goTo, snapPointIndexes } =
     useSnapCarousel();
   return (
-    <div style={styles.root}>
+    <Fragment>
       <ul style={styles.scroll} ref={scrollRef}>
         {items.map((item, i) =>
           renderItem({
@@ -59,7 +59,7 @@ export const Carousel = <T extends any>({ items, renderItem }: CarouselProps<T>)
           })
         )}
       </ul>
-      <div className="owl-dots" style={styles.controls} aria-hidden>
+      <div className="owl-dots" dir='rtl' style={styles.controls} aria-hidden>
         {pages.map((_, i) => (
           <div
             key={i}
@@ -69,22 +69,23 @@ export const Carousel = <T extends any>({ items, renderItem }: CarouselProps<T>)
           </div>
         ))}
       </div>
-    </div>
+    </Fragment>
   );
 };
 
 interface CarouselItemProps {
   readonly isSnapPoint: boolean;
   readonly children?: React.ReactNode;
+  readonly classes?: string;
 }
 
-export const CarouselItem = ({ isSnapPoint, children }: CarouselItemProps) => (
+export const CarouselItem = ({ isSnapPoint, children, classes }: CarouselItemProps) => (
   <li
     style={{
       ...styles.item,
       ...(isSnapPoint ? styles.itemSnapPoint : {}),
     }}
-    className="w-full sm:w-[30%] h-auto mr-4 rtl:mr-0 ml-4 ">
+    className={ classes ?? `w-full sm:w-[30%] h-auto mr-4 rtl:mr-0 ml-4` }>
     {children}
   </li>
 );
