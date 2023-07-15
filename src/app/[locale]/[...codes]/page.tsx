@@ -43,7 +43,17 @@ export default async function Inner({ params }: { params: { locale: string; code
   const menuService = new MenuService();
 
   const service = new PagesService();
-  const currentCode = codes[codes.length - 1];
+  let currentCode;
+  let id: string | null;
+  const lastCode = codes[codes.length - 1];
+  if (codes.length > 2) {
+    currentCode = codes[1];
+    id = lastCode;
+  } else {
+    currentCode = lastCode;
+    id = null;
+  }
+
   const page = await service.getPageByCode(currentCode, params.locale);
   const menu = await menuService.getMainMenu(params.locale);
   const socialLinksService = new SocialLinksService();

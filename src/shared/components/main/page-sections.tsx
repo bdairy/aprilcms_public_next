@@ -10,6 +10,8 @@ import InnerBannerWithImage from '../banners/inner-banner-with-image';
 import GuidlinePrinciples from '../about/guidline-principles';
 import AcademyValues from '../about/academy-values';
 import OurSchools from '../about/our-schools';
+import { OurServices } from '@/shared/models/our_services.model';
+import OurServicesSection from '../our-services/our-services-section';
 
 export default function PageSections(params: { page: IPage; locale: string; codes: string[] }) {
   const { locale, page, codes } = params;
@@ -71,6 +73,14 @@ export default function PageSections(params: { page: IPage; locale: string; code
           id: section.id,
           element: (
             <OurSchools locale={locale}  section={section} />
+          ),
+        };
+        break;
+      case 'services':
+        element = {
+          id: section.id,
+          element: (
+            <OurServicesSection locale={locale} classes=''  />
           ),
         };
         break;
