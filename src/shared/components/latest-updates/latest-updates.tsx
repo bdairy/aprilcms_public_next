@@ -1,5 +1,4 @@
 import { NewsService } from '@/shared/services/news.service';
-import { useTranslations } from 'next-intl';
 import { Fragment } from 'react';
 import LatestUpdatesCarousel from './latest-updates-carousel';
 import LatestUpdatesHeader from './latest-updates-header';

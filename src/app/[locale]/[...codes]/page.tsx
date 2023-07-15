@@ -1,3 +1,5 @@
+import InnerBanner from '@/shared/components/banners/inner-banner';
+import InnerBannerBlank from '@/shared/components/banners/inner-banner-blank';
 import Footer from '@/shared/components/footer';
 import PageSections from '@/shared/components/main/page-sections';
 import Nav from '@/shared/components/nav';
@@ -50,6 +52,8 @@ export default async function Inner({ params }: { params: { locale: string; code
   return (
     <Fragment>
       <Nav menu={menu ?? []} locale={params.locale}></Nav>
+      {page?.coverImageUrl && <InnerBanner page={page}></InnerBanner>}
+      {page?.template.code == 'blank_banner' && <InnerBannerBlank page={page}></InnerBannerBlank>}
       <div className="master-container">
         <PageSections page={page!} locale={params.locale} codes={params.codes} />
       </div>

@@ -3,6 +3,7 @@ import ContentWithImage from '../content-with-image';
 import BasicContent from '../basic-content';
 import WhereWeInvest from '../where-we-invest';
 import AppleLearningProvider from '../apple-learning-provider';
+import OurPrinciples from '../about/our-principles';
 
 export default function ContentComponent(params: {
   section: ISection;
@@ -49,6 +50,11 @@ export default function ContentComponent(params: {
     case 'apple_professional_learning_provider':
       element = (
         <AppleLearningProvider section={section}  locale={locale}  />
+      );
+      break;
+    case 'our_principles':
+      element = (
+        <OurPrinciples section={section}  locale={locale}  />
       );
       break;
 

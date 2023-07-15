@@ -4,7 +4,6 @@ import Nav from '@/shared/components/nav';
 import { MenuService } from '@/shared/services/menu.service';
 import { PagesService } from '@/shared/services/pages.service';
 import { SocialLinksService } from '@/shared/services/social-links.service';
-import { useTranslations } from 'next-intl';
 import { Fragment } from 'react';
 
 export default async function Home({ params }: { params: { locale: string; codes: string[] } }) {
