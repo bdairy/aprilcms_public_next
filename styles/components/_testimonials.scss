@@ -107,6 +107,8 @@
       width: 6px;
       height: 6px;
       margin: 5px;
+     @apply transition-all duration-300;
+
       span {
         display: inline-block;
         @apply rounded-2xl bg-gray-300 w-full h-full cursor-pointer;

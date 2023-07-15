@@ -62,13 +62,18 @@
         .icons {
           @apply flex flex-row gap-4 items-end justify-start;
 
-          .icon {
+          .icon a{
             width: 28px;
             height: 28px;
             display: flex;
             align-items: center;
             flex-direction: column;
             justify-content: flex-end;
+            img{
+              width: 28px;
+              height: 28px;
+              object-fit: contain;
+            }
           }
         }
       }

@@ -1,7 +1,9 @@
+import Footer from '@/shared/components/footer';
 import PageSections from '@/shared/components/main/page-sections';
 import Nav from '@/shared/components/nav';
 import { MenuService } from '@/shared/services/menu.service';
 import { PagesService } from '@/shared/services/pages.service';
+import { SocialLinksService } from '@/shared/services/social-links.service';
 import { Fragment } from 'react';
 export async function generateMetadata({
   params,
@@ -42,16 +44,16 @@ export default async function Inner({ params }: { params: { locale: string; code
   const currentCode = codes[codes.length - 1];
   const page = await service.getPageByCode(currentCode, params.locale);
   const menu = await menuService.getMainMenu(params.locale);
+  const socialLinksService = new SocialLinksService();
+  const socialLinks = await socialLinksService.getSocialLinks(params.locale);
 
   return (
     <Fragment>
-    <Nav menu={menu ?? []} locale={params.locale}></Nav>
-    <div className="master-container">
-
-         <PageSections  page={page!} locale={params.locale} codes={params.codes} />
-
-
-    </div>
-  </Fragment>
+      <Nav menu={menu ?? []} locale={params.locale}></Nav>
+      <div className="master-container">
+        <PageSections page={page!} locale={params.locale} codes={params.codes} />
+      </div>
+      <Footer socaialLinks={socialLinks ?? []} locale={params.locale}></Footer>
+    </Fragment>
   );
 }
