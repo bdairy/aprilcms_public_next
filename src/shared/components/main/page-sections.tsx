@@ -8,6 +8,8 @@ import TestimonialsSection from '../testimonials/testimonials-section';
 import InnerBanner from '../banners/inner-banner';
 import InnerBannerWithImage from '../banners/inner-banner-with-image';
 import GuidlinePrinciples from '../about/guidline-principles';
+import AcademyValues from '../about/academy-values';
+import OurSchools from '../about/our-schools';
 
 export default function PageSections(params: { page: IPage; locale: string; codes: string[] }) {
   const { locale, page, codes } = params;
@@ -53,6 +55,22 @@ export default function PageSections(params: { page: IPage; locale: string; code
           id: section.id,
           element: (
             <GuidlinePrinciples locale={locale}  section={section} />
+          ),
+        };
+        break;
+      case 'academy_values':
+        element = {
+          id: section.id,
+          element: (
+            <AcademyValues locale={locale}  section={section} />
+          ),
+        };
+        break;
+      case 'our_schools':
+        element = {
+          id: section.id,
+          element: (
+            <OurSchools locale={locale}  section={section} />
           ),
         };
         break;

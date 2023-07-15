@@ -118,7 +118,7 @@ export default function Nav(params: { menu: IMenuItem[]; locale: string }) {
   }, [headerRef, overlayRef, menuRef, menuMobileTriggerRef, subMenu]);
 
   const activeClass = (state: string) => {
-    return path === `/${state}` ? 'active' : '';
+    return path.replaceAll('/ar/', '/') === `/${state}` ? 'active' : '';
   };
 
   const hasChildren = (item: IMenuItem) => {

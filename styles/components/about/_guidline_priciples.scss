@@ -1,6 +1,6 @@
 .guidline-priciples {
   height: 600px;
-  @apply bg-beige-500 py-20 mt-32 mb-20;
+  @apply bg-beige-500 py-20 mt-32 sm:mt-56 mb-20;
 
   .wrapper {
     @apply flex h-full flex-col sm:flex-row mx-auto items-center justify-center gap-14;

@@ -12,7 +12,7 @@ export default function GuidlinePrinciples(params: { section: ISection; locale: 
           <div className="title">
             <h2>{section.data?.title}</h2>
           </div>
-          <p className="content" dangerouslySetInnerHTML={{ __html: section.data!.body ?? '' }}></p>
+          <div className="content" dangerouslySetInnerHTML={{ __html: section.data!.body ?? '' }}></div>
         </div>
         <div className="data">
           {section.data?.customData.data &&

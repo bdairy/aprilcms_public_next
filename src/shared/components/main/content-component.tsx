@@ -4,6 +4,7 @@ import BasicContent from '../basic-content';
 import WhereWeInvest from '../where-we-invest';
 import AppleLearningProvider from '../apple-learning-provider';
 import OurPrinciples from '../about/our-principles';
+import LetterFromCEO from '../about/letter-from-ceo';
 
 export default function ContentComponent(params: {
   section: ISection;
@@ -55,6 +56,11 @@ export default function ContentComponent(params: {
     case 'our_principles':
       element = (
         <OurPrinciples section={section}  locale={locale}  />
+      );
+      break;
+    case 'ms._mariam_saqer':
+      element = (
+        <LetterFromCEO section={section}  locale={locale}  />
       );
       break;
 
