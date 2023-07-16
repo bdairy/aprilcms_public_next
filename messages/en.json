@@ -11,6 +11,10 @@
   },
   "About":{
     "our_principles": "Our Principles"
+  },
+  "TrainingCenter":{
+    "our_services": "Our Services",
+    "click_achievements": "Click to see our achievements"
   }
 
 }

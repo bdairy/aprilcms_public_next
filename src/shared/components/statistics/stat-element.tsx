@@ -9,7 +9,11 @@ export default function StatElement(params: { stat: IStatistics }) {
   };
 
   const formatNumber = (val: number) => {
-    return String(val.toLocaleString()).padStart(2, '0');
+    let ret = String(val.toLocaleString()).padStart(2, '0');
+    if (stat.type === 'percentage') {
+      ret = ret + '%';
+    }
+    return ret;
   };
   const { stat } = params;
   return (
@@ -19,7 +23,6 @@ export default function StatElement(params: { stat: IStatistics }) {
         <CountUp
           end={getVal()}
           formattingFn={formatNumber}
-          suffix={stat.type === 'percentage' ? '%' : ''}
           enableScrollSpy={true}
         />
       </div>

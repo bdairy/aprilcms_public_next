@@ -13,6 +13,12 @@ import OurSchools from '../about/our-schools';
 import { OurServices } from '@/shared/models/our_services.model';
 import OurServicesSection from '../our-services/our-services-section';
 import ServiceDetails from '../our-services/service-details';
+import TrainingServices from '../training_center/training_services';
+import TrainingCertificates from '../training_center/training_certificates';
+import TrainingAchievements from '../training_center/training_achievements';
+import TrainingServicesOnly from '../training_center/training_services_only';
+import TrainingAchievementList from '../training_center/training_achievement_list';
+import TrainingStatistics from '../training_center/training_statistics';
 
 export default function PageSections(params: { page: IPage; locale: string; codes: string[], id: string | null }) {
   const { locale, page, codes, id } = params;
@@ -90,6 +96,54 @@ export default function PageSections(params: { page: IPage; locale: string; code
           id: section.id,
           element: (
             <ServiceDetails locale={locale} codes={codes} id={id}  />
+          ),
+        };
+        break;
+      case 'training_services':
+        element = {
+          id: section.id,
+          element: (
+            <TrainingServices locale={locale}  section={section}  />
+          ),
+        };
+        break;
+      case 'training_certificates':
+        element = {
+          id: section.id,
+          element: (
+            <TrainingCertificates locale={locale}  section={section}  />
+          ),
+        };
+        break;
+      case 'training_achievements':
+        element = {
+          id: section.id,
+          element: (
+            <TrainingAchievements locale={locale}  section={section}  />
+          ),
+        };
+        break;
+      case 'training_center_services':
+        element = {
+          id: section.id,
+          element: (
+            <TrainingServicesOnly locale={locale}  section={section}  />
+          ),
+        };
+        break;
+      case 'achievements':
+        element = {
+          id: section.id,
+          element: (
+            <TrainingAchievementList locale={locale}  section={section}  />
+          ),
+        };
+        break;
+      case 'training_statistics':
+        element = {
+          id: section.id,
+          element: (
+            <TrainingStatistics locale={locale} page={page}  section={section}  />
           ),
         };
         break;

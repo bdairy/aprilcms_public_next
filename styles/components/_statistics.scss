@@ -50,11 +50,11 @@
   .statistics {
     height: 400px;
     .wrapper {
-      app-stat-element{
+
       .title {
         display: none;
       }
-    }
+
     }
   }
 }
@@ -65,14 +65,14 @@
     height: auto;
     @apply py-8;
 
-    app-stat-element {
+
       margin-top: 64px;
 
       .desc {
         height: auto !important;
 
       }
-    }
+
   }
 
   .training-statistics {

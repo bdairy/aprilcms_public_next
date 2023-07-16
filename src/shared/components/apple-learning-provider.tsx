@@ -34,7 +34,7 @@ return (<motion.div
         </div>
         <div className="content">
       <h2 className="title">{section.data!.title}</h2>
-      <Image src="images/apple-cert.svg" className="apple-logo" width={345} height={40}  alt={section.data!.title ?? ''} />
+      <Image src="/images/apple-cert.svg" className="apple-logo" width={345} height={40}  alt={section.data!.title ?? ''} />
           <span dangerouslySetInnerHTML={{ __html: section.data!.body ?? '' }}></span>
           {section.data!.link && (
             <Link className="btn-txt primary" locale={locale} href={section.data!.link}>

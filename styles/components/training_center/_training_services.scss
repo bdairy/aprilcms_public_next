@@ -18,7 +18,7 @@
 
 
       .data {
-        @apply mt-0;
+        @apply mt-0 w-full;
 
         .content {
           &.active {
@@ -55,15 +55,17 @@
     }
 
     .data {
-      @apply flex-grow flex flex-row flex-wrap gap-4 sm:gap-0 sm:justify-between mt-20;
+      @apply flex-grow w-full flex flex-row flex-wrap gap-4 sm:gap-0 sm:justify-between mt-20;
 
-      .content {
-        width: 23%;
+      a{
+         width: 23%;
         aspect-ratio: 1.07;
+         .content {
+
         background: #FFFFFF 0% 0% no-repeat padding-box;
         box-shadow: 0px 10px 30px #4B2D2F1A;
 
-        @apply bg-white text-2xl text-black p-9 cursor-pointer hover:bg-beige-200 flex flex-col justify-between items-start relative;
+        @apply bg-white w-full h-full text-2xl text-black p-9 cursor-pointer hover:bg-beige-200 flex flex-col justify-between items-start relative;
 
         .text {
           @apply flex flex-row items-end justify-between w-full;
@@ -88,6 +90,7 @@
         }
 
       }
+    }
     }
   }
 
@@ -118,14 +121,17 @@
       .data {
         @apply mb-16;
 
-        .content {
+        a {
           width: 100%;
           aspect-ratio: unset;
+          .content {
+
 
           &.even {
             transform: unset;
           }
         }
+      }
       }
     }
 

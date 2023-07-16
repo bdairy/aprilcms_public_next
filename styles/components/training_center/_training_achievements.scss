@@ -20,6 +20,9 @@
     @apply text-white border-white border-2
     flex flex-row items-center justify-around
      px-10 py-5 cursor-pointer w-80;
+     img{
+      @apply rtl:rotate-180;
+     }
   }
 
 }

@@ -11,7 +11,7 @@ export default function OurPrinciples(params: { section: ISection; locale: strin
   const t = useTranslations('About');
   const { section, locale } = params;
   return (
-    <div className="our-principles">
+    <motion.div className="our-principles">
       <div className="wrapper container">
     <div className="title">
       <h2 >{t('our_principles')}</h2>
@@ -27,6 +27,6 @@ export default function OurPrinciples(params: { section: ISection; locale: strin
             ))}
     </div>
   </div>
-    </div>
+    </motion.div>
   );
 }

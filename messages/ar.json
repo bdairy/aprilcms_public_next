@@ -10,5 +10,9 @@
   },
   "About":{
     "our_principles": "مبادئنا"
+  } ,
+  "TrainingCenter":{
+    "our_services": "خدماتنا",
+    "click_achievements": "تعرف على انجازاتنا"
   }
 }
