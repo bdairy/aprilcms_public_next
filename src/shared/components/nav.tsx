@@ -45,6 +45,7 @@ export default function Nav(params: { menu: IMenuItem[]; locale: string }) {
 
     const showSubMenu = (hasChildren: any) => {
       if (menuEl) {
+        // eslint-disable-next-line react-hooks/exhaustive-deps
         subMenu = hasChildren.querySelector('.menu-subs');
         subMenu.classList.add('active');
         subMenu.style.animation = 'slideLeft 0.5s ease forwards';

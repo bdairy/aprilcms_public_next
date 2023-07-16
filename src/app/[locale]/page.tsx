@@ -17,7 +17,7 @@ export default async function Home({ params }: { params: { locale: string; codes
     <Fragment>
       <Nav menu={menu ?? []} locale={params.locale}></Nav>
       <div className="master-container">
-        <PageSections page={page!} locale={params.locale} codes={['']} />
+        <PageSections page={page!} locale={params.locale} codes={['']} id={null} />
       </div>
       <Footer socaialLinks={socialLinks ?? []} locale={params.locale}></Footer>
     </Fragment>

@@ -12,9 +12,10 @@ import AcademyValues from '../about/academy-values';
 import OurSchools from '../about/our-schools';
 import { OurServices } from '@/shared/models/our_services.model';
 import OurServicesSection from '../our-services/our-services-section';
+import ServiceDetails from '../our-services/service-details';
 
-export default function PageSections(params: { page: IPage; locale: string; codes: string[] }) {
-  const { locale, page, codes } = params;
+export default function PageSections(params: { page: IPage; locale: string; codes: string[], id: string | null }) {
+  const { locale, page, codes, id } = params;
   let sections: any[] = [];
   page.sections.forEach((section) => {
     let element: { id: string; element: any };
@@ -81,6 +82,14 @@ export default function PageSections(params: { page: IPage; locale: string; code
           id: section.id,
           element: (
             <OurServicesSection locale={locale} classes=''  />
+          ),
+        };
+        break;
+      case 'service_details':
+        element = {
+          id: section.id,
+          element: (
+            <ServiceDetails locale={locale} codes={codes} id={id}  />
           ),
         };
         break;

@@ -65,7 +65,7 @@ export default async function Inner({ params }: { params: { locale: string; code
       {page?.coverImageUrl && <InnerBanner page={page}></InnerBanner>}
       {page?.template.code == 'blank_banner' && <InnerBannerBlank page={page}></InnerBannerBlank>}
       <div className="master-container">
-        <PageSections page={page!} locale={params.locale} codes={params.codes} />
+        <PageSections page={page!} locale={params.locale} codes={params.codes} id={id} />
       </div>
       <Footer socaialLinks={socialLinks ?? []} locale={params.locale}></Footer>
     </Fragment>

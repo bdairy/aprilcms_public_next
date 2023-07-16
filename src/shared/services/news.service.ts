@@ -1,4 +1,4 @@
-import { ApiResult } from '../components/api-result';
+import { ApiResult } from '../models/api-result';
 import { INewsItem, NewsItem } from '../models/news-item';
 import { ApiService } from './api.service';
 
