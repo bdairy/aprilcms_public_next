@@ -28,8 +28,8 @@ export default function TrainingServices(params: { section: ISection; locale: st
         <div className="data">
           {section.data?.customData.data &&
             section.data?.customData.data.map((d: any, index: number) => (
-              <Link href={`/training_center/${d.link}`} title={LanguageObject.getValue(d.text, locale)} locale={locale}>
-                <div key={index} className={`content ${checkIfActive(d.link)}`}>
+              <Link key={index} href={`/training_center/${d.link}`} title={LanguageObject.getValue(d.text, locale)} locale={locale}>
+                <div  className={`content ${checkIfActive(d.link)}`}>
                   <div className="corner" style={{ backgroundImage: `url(${d.image})` }}></div>
                   <div className="text">
                     <h3> {LanguageObject.getValue(d.text, locale)}</h3>
