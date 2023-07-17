@@ -14,5 +14,9 @@
   "TrainingCenter":{
     "our_services": "خدماتنا",
     "click_achievements": "تعرف على انجازاتنا"
+  },
+  "News":{
+    "all-news": "كل الأخبار",
+    "search-news": "البحث عن الأخبار"
   }
 }

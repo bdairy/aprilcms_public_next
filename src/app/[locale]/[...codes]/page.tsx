@@ -38,7 +38,18 @@ export async function generateMetadata({
   }
 }
 
-export default async function Inner({ params }: { params: { locale: string; codes: string[] } }) {
+export default async function Inner({
+  params,
+  searchParams,
+}: {
+  params: {
+    locale: string;
+    codes: string[];
+  };
+  searchParams: {
+    searchParams?: { [key: string]: string | string[] | undefined };
+  };
+}) {
   const codes = params.codes;
   const menuService = new MenuService();
 
@@ -65,7 +76,13 @@ export default async function Inner({ params }: { params: { locale: string; code
       {page?.coverImageUrl && <InnerBanner page={page}></InnerBanner>}
       {page?.template.code == 'blank_banner' && <InnerBannerBlank page={page}></InnerBannerBlank>}
       <div className="master-container">
-        <PageSections page={page!} locale={params.locale} codes={params.codes} id={id} />
+        <PageSections
+          page={page!}
+          locale={params.locale}
+          codes={params.codes}
+          id={id}
+          searchParams={searchParams}
+        />
       </div>
       <Footer socaialLinks={socialLinks ?? []} locale={params.locale}></Footer>
     </Fragment>

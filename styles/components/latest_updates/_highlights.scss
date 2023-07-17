@@ -13,17 +13,11 @@ $bgScale: 1.25;
       width: 340px;
       position: relative;
       @apply  flex flex-col justify-end hover:cursor-pointer overflow-hidden;
-
       .bg-wrapper {
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center;
-        @apply h-full w-full transition-all duration-700 opacity-0;
-
-        &.ng-lazyloaded {
-          opacity: 1;
-        }
-
+        @apply h-full w-full transition-all duration-700;
         .content {
           background: transparent linear-gradient(0deg, #000000 0%, #00000000 100%) 0% 0% no-repeat padding-box;
           height: 60%;

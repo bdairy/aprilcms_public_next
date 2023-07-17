@@ -3,15 +3,18 @@
   height: 30px;
   @apply flex flex-row gap-4 items-center justify-start;
 
-  div {
+  li {
     position: relative;
+    @apply cursor-pointer;
     a {
-
       @apply text-greydark-500 text-[16px] cursor-pointer;
 
-      &.current {
-        @apply text-primary-500 cursor-auto;
+    }
 
+    &.current {
+      @apply cursor-auto;
+      a {
+        @apply text-primary-500 cursor-auto;
       }
 
     }
@@ -29,11 +32,11 @@
     }
 
 
-    &:last-child {
+    &:nth-last-child(2) {
 
-        &::after {
-          display: none;
-        }
+      &::after {
+        display: none;
+      }
 
     }
   }

@@ -15,6 +15,10 @@
   "TrainingCenter":{
     "our_services": "Our Services",
     "click_achievements": "Click to see our achievements"
+  },
+  "News":{
+    "all-news": "All News",
+    "search-news": "Search for news"
   }
 
 }

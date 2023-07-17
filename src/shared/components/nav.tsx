@@ -125,7 +125,7 @@ export default function Nav(params: { menu: IMenuItem[]; locale: string }) {
   const hasChildren = (item: IMenuItem) => {
     return item.children && item.children.length > 0;
   };
-  console.log(path);
+
 
   return (
     <header ref={headerRef} className="header">

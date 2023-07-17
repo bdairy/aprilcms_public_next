@@ -19,9 +19,17 @@ import TrainingAchievements from '../training_center/training_achievements';
 import TrainingServicesOnly from '../training_center/training_services_only';
 import TrainingAchievementList from '../training_center/training_achievement_list';
 import TrainingStatistics from '../training_center/training_statistics';
+import NewsHilights from '../news/highlights/news-highlights';
+import AllNews from '../news/all-news/all-news';
 
-export default function PageSections(params: { page: IPage; locale: string; codes: string[], id: string | null }) {
-  const { locale, page, codes, id } = params;
+export default function PageSections(params: {
+  page: IPage;
+  locale: string;
+  codes: string[];
+  id: string | null;
+  searchParams?:any;
+}) {
+  const { locale, page, codes, id, searchParams } = params;
   let sections: any[] = [];
   page.sections.forEach((section) => {
     let element: { id: string; element: any };
@@ -30,10 +38,10 @@ export default function PageSections(params: { page: IPage; locale: string; code
         element = { id: section.id, element: <MainBanner section={section} locale={locale} /> };
         break;
       case 'inner-banner':
-        element = { id: section.id, element: <InnerBanner page={page}  /> };
+        element = { id: section.id, element: <InnerBanner page={page} /> };
         break;
       case 'inline-banner-with-image':
-        element = { id: section.id, element: <InnerBannerWithImage section={section}  /> };
+        element = { id: section.id, element: <InnerBannerWithImage section={section} /> };
         break;
       case 'statistics':
         element = {
@@ -46,105 +54,91 @@ export default function PageSections(params: { page: IPage; locale: string; code
       case 'latest-updates':
         element = {
           id: section.id,
-          element: (
-            <LatestUpdates locale={locale} classes={''} />
-          ),
+          element: <LatestUpdates locale={locale} classes={''} />,
         };
         break;
       case 'testimonials':
         element = {
           id: section.id,
-          element: (
-            <TestimonialsSection locale={locale} page={page} section={section} />
-          ),
+          element: <TestimonialsSection locale={locale} page={page} section={section} />,
         };
         break;
       case 'guidline_principles':
         element = {
           id: section.id,
-          element: (
-            <GuidlinePrinciples locale={locale}  section={section} />
-          ),
+          element: <GuidlinePrinciples locale={locale} section={section} />,
         };
         break;
       case 'academy_values':
         element = {
           id: section.id,
-          element: (
-            <AcademyValues locale={locale}  section={section} />
-          ),
+          element: <AcademyValues locale={locale} section={section} />,
         };
         break;
       case 'our_schools':
         element = {
           id: section.id,
-          element: (
-            <OurSchools locale={locale}  section={section} />
-          ),
+          element: <OurSchools locale={locale} section={section} />,
         };
         break;
       case 'services':
         element = {
           id: section.id,
-          element: (
-            <OurServicesSection locale={locale} classes=''  />
-          ),
+          element: <OurServicesSection locale={locale} classes="" />,
         };
         break;
       case 'service_details':
         element = {
           id: section.id,
-          element: (
-            <ServiceDetails locale={locale} codes={codes} id={id}  />
-          ),
+          element: <ServiceDetails locale={locale} codes={codes} id={id} />,
         };
         break;
       case 'training_services':
         element = {
           id: section.id,
-          element: (
-            <TrainingServices locale={locale}  section={section}  />
-          ),
+          element: <TrainingServices locale={locale} section={section} />,
         };
         break;
       case 'training_certificates':
         element = {
           id: section.id,
-          element: (
-            <TrainingCertificates locale={locale}  section={section}  />
-          ),
+          element: <TrainingCertificates locale={locale} section={section} />,
         };
         break;
       case 'training_achievements':
         element = {
           id: section.id,
-          element: (
-            <TrainingAchievements locale={locale}  section={section}  />
-          ),
+          element: <TrainingAchievements locale={locale} section={section} />,
         };
         break;
       case 'training_center_services':
         element = {
           id: section.id,
-          element: (
-            <TrainingServicesOnly locale={locale}  section={section}  />
-          ),
+          element: <TrainingServicesOnly locale={locale} section={section} />,
         };
         break;
       case 'achievements':
         element = {
           id: section.id,
-          element: (
-            <TrainingAchievementList locale={locale}  section={section}  />
-          ),
+          element: <TrainingAchievementList locale={locale} section={section} />,
         };
         break;
       case 'training_statistics':
         element = {
           id: section.id,
-          element: (
-            <TrainingStatistics locale={locale} page={page}  section={section}  />
-          ),
+          element: <TrainingStatistics locale={locale} page={page} section={section} />,
+        };
+        break;
+      case 'news':
+        element = {
+          id: section.id,
+          element: <AllNews locale={locale} searchParams={searchParams ?? {}} />,
+        };
+        break;
+      case 'news_highlights':
+        element = {
+          id: section.id,
+          element: <NewsHilights locale={locale} />,
         };
         break;
 
