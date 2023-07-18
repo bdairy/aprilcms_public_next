@@ -20,7 +20,7 @@ export default function BreadCrumb(params: {
 
         <span className="chev"></span>
 
-        <Link className="link" locale={locale} href={`/${codes[0]}/${codes[1]}`}>
+        <Link className="link" locale={locale} href={`/${codes.join('/')}`}>
           {t(routeNames[0])}
         </Link>
         <span className="chev"></span>

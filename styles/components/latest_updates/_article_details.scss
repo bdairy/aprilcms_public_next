@@ -48,10 +48,13 @@
         }
 
         .icon {
+          width: 30px;
+          height: 30px;
 
           img {
+            width: 30px;
+            height: 30px;
             object-fit: contain;
-
 
 
           }
@@ -61,33 +64,35 @@
 
     .title {
       @apply z-10;
+
       h2 {
         @apply text-primary-900;
         font-size: 60px;
         font-weight: bold;
-       @apply tracking-[-3px] rtl:tracking-normal;
+        @apply tracking-[-3px] rtl:tracking-normal;
         line-height: 0.95;
       }
     }
 
-    .image{
-      @apply z-10 ;
-      img{
-        @apply sm:max-w-2xl h-auto   w-full;
+    .image {
+      @apply z-10;
+
+      img {
+        @apply sm:max-w-2xl h-auto w-full;
       }
     }
 
   }
 
-  .article-body{
-    @apply text-gray-500 text-xl;
-    p{
+  .article-body {
+    @apply text-gray-500 text-xl mb-32;
+
+    p {
       margin-bottom: 10px;
     }
-    img{
+
+    img {
       @apply max-w-xl h-auto my-12;
     }
   }
 }
-
-
