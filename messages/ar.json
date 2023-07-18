@@ -8,7 +8,9 @@
     "our_services": "خدماتنا",
     "home": "الرئيسية",
     "share_to": "مشاركة",
-    "latest_updates": "آخر الأخبار"
+    "latest_updates": "آخر الأخبار",
+    "no_records": "لم نستطع ايجاد اي نتائج تطابق بحثك"
+
   },
   "About":{
     "our_principles": "مبادئنا"

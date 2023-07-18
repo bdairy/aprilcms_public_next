@@ -17,7 +17,7 @@ export default function Paginator(params: {
 
 
   const handlePageClick = (params: { selected: any }) => {
-    console.log('handing');
+
     const { selected } = params;
     const current = new URLSearchParams(Array.from(searchParams.entries())); // -> has to use this form
     current.delete('pageIndex');

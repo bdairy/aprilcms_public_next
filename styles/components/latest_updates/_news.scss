@@ -28,6 +28,7 @@
       &:focus {
         border: none;
         outline: none;
+        @apply ring-0;
 
       }
     }
