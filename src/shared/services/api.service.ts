@@ -15,4 +15,16 @@ export class ApiService {
       throw error;
     }
   }
+  async postData(url: string,data: any, options: any) {
+
+
+    try {
+      const result = await fetch(`${this.root}${url}`, {cache: 'no-store', headers: options, method: 'POST' });
+
+      const res = await result.json();
+      return res;
+    } catch (error) {
+      throw error;
+    }
+  }
 }

@@ -22,6 +22,7 @@ import TrainingStatistics from '../training_center/training_statistics';
 import NewsHilights from '../news/highlights/news-highlights';
 import AllNews from '../news/all-news/all-news';
 import NewsDetails from '../news/news-details/news-details';
+import ContactUs from '../contact-us/contact-us';
 
 export default function PageSections(params: {
   page: IPage;
@@ -146,6 +147,12 @@ export default function PageSections(params: {
         element = {
           id: section.id,
           element: <NewsDetails codes={codes} locale={locale} id={id} />,
+        };
+        break;
+      case 'contact_us':
+        element = {
+          id: section.id,
+          element: <ContactUs  locale={locale} />,
         };
         break;
 

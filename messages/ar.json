@@ -22,5 +22,8 @@
   "News":{
     "all-news": "كل الأخبار",
     "search-news": "البحث عن الأخبار"
+  },
+  "ContactUs": {
+    "get_direction": "احصل على الاتجاهات"
   }
 }

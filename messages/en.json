@@ -22,6 +22,9 @@
   "News":{
     "all-news": "All News",
     "search-news": "Search for news"
+  },
+  "ContactUs": {
+    "get_direction": "Get Directions"
   }
 
 }

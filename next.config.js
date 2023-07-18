@@ -11,6 +11,10 @@ const nextConfig = {
   images: {
     domains: ['res.cloudinary.com'],
   },
+  env: {
+    GOOGLE_MAP_API_KEY: 'AIzaSyBTOPQi6J-yLn1yw38UaO_i7fE9GGtnv9o',
+    NEXT_PUBLIC_SITE_URL: 'http://localhost:3000'
+  },
 
 };
 

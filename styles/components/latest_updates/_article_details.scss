@@ -29,6 +29,7 @@
           background-image: url('/images/icons/breadcrumb-chev-right.svg');
           background-repeat: no-repeat;
           background-size: contain;
+          @apply rtl:rotate-180;
         }
       }
     }
