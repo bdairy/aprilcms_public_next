@@ -8,7 +8,7 @@ export class ContactUs {
       name: form.name,
       email: form.email,
       message: form.message,
-      reCaptchaToken: form.recaptcha
+      reCaptchaToken: form.token
     };
     return command;
   }

@@ -8,10 +8,10 @@ import { ApiService } from './api.service';
 export class ContactService {
   root = 'contact-us';
 
-  async submitContactUs(form: any) {
+  async submitContactUs(form: any, locale: string) {
     const api = new ApiService();
     try {
-      return await api.postData(`${this.root}`, ContactUs.fromForm(form), null);
+      return await api.postData(`${this.root}`, ContactUs.fromForm(form), { 'Accept-Language': locale });
     } catch (error) {
       throw error;
     }

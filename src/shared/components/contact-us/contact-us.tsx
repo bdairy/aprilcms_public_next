@@ -5,6 +5,7 @@ import { IContactItem } from '@/shared/models/contact.model';
 import ContactForm from './contact-form';
 
 export default async function ContactUs(params: { locale: string }) {
+
   const service = new ContactService();
   const contactInfo = await service.getContactUs(params.locale);
   let contacts: IContactItem[] = [];
@@ -49,7 +50,7 @@ export default async function ContactUs(params: { locale: string }) {
           ))}
         </div>
       </div>
-      <ContactForm position={position}></ContactForm>
+      <ContactForm position={position} locale={params.locale}></ContactForm>
     </Fragment>
   );
 }
