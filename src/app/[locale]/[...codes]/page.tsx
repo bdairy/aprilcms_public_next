@@ -1,6 +1,6 @@
 import InnerBanner from '@/shared/components/banners/inner-banner';
 import InnerBannerBlank from '@/shared/components/banners/inner-banner-blank';
-import Footer from '@/shared/components/footer';
+import Footer from '@/shared/components/footer/footer';
 import PageSections from '@/shared/components/main/page-sections';
 import Nav from '@/shared/components/nav';
 import { MenuService } from '@/shared/services/menu.service';

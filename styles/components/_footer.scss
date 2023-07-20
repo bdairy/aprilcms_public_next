@@ -40,7 +40,7 @@
           @apply inline-grid grid-cols-2 grid-rows-3 gap-4;
 
           .link {
-            @apply text-white cursor-pointer;
+            @apply text-white cursor-pointer ;
             &.active{
               @apply text-primary-300 cursor-auto ;
             }
