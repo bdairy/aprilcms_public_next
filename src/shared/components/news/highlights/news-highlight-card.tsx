@@ -10,7 +10,7 @@ export default function NewsHighlightCard(params: { item: INewsItem; locale: str
   return (
     <Link
       className="highlight-card"
-      href={`/latest_updates/news_details/${item.id}`}
+      href={`/latest_updates/news_details?id=${item.id}`}
       title={item.title}
       locale={locale}>
       <div className="bg-wrapper" style={{ backgroundImage: `url(${item.image})` }}>

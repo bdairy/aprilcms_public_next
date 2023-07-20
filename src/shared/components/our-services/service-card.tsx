@@ -29,7 +29,7 @@ export default function ServiceCard(params: {
             <div className="desc" dangerouslySetInnerHTML={{ __html: truncate( service.description, 500)  }}></div>
             <Link
               className="btn-txt primary"
-              href={`/about/service_details/${service.id}`}
+              href={`/about/service_details?id=${service.id}`}
               locale={locale}>
               {t('more')}
             </Link>

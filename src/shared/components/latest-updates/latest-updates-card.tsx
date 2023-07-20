@@ -8,7 +8,7 @@ export default function LatestUpadtesCard(params: { item: INewsItem }) {
     return moment(date).format('DD MMM yy');
   }
   return (
-    <Link href={`/latest_updates/news_details/${item.id}`} className="home-news-card">
+    <Link href={`/latest_updates/news_details?id=${item.id}`} className="home-news-card">
       <div className="bg-wrapper" style={{ backgroundImage: `url(${item.image})` }}>
         <div className="content">
           <div className="date">{getDate(item.createDate)}</div>

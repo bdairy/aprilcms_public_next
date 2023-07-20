@@ -9,7 +9,7 @@ export default function NewsItemCard(params: { item: INewsItem, locale: string }
     return moment(date).format('DD MMM yy');
   };
   return (
-    <Link className="news-item" href={`/latest_updates/news_details/${item.id}`}  >
+    <Link className="news-item" href={`/latest_updates/news_details?id=${item.id}`}  >
 
   <div
     className="image"
