@@ -3,6 +3,7 @@ import InnerBannerBlank from '@/shared/components/banners/inner-banner-blank';
 import Footer from '@/shared/components/footer/footer';
 import PageSections from '@/shared/components/main/page-sections';
 import Nav from '@/shared/components/nav';
+import { FooterService } from '@/shared/services/footer.service';
 import { MenuService } from '@/shared/services/menu.service';
 import { NewsService } from '@/shared/services/news.service';
 import { OurServicesService } from '@/shared/services/our-services.service';
@@ -171,6 +172,8 @@ export default async function Inner({
   const menu = await menuService.getMainMenu(params.locale);
   const socialLinksService = new SocialLinksService();
   const socialLinks = await socialLinksService.getSocialLinks(params.locale);
+  const footerService = new FooterService();
+  const footerData = await footerService.getFooter(params.locale);
 
   return (
     <Fragment>
@@ -186,7 +189,7 @@ export default async function Inner({
           searchParams={searchParams}
         />
       </div>
-      <Footer socaialLinks={socialLinks ?? []} locale={params.locale}></Footer>
+      <Footer socaialLinks={socialLinks ?? []} data={footerData ?? []} locale={params.locale}></Footer>
     </Fragment>
   );
 }
