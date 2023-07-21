@@ -1,4 +1,4 @@
-import isEmail from '@/shared/helpers/is-email';
+'use client'
 import { ContactService } from '@/shared/services/contact.service';
 import { useCallback, useState } from 'react';
 import { useGoogleReCaptcha } from 'react-google-recaptcha-v3';

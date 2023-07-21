@@ -2,10 +2,15 @@
 
 import Link from "next-intl/link";
 import { usePathname } from "next/navigation";
-import { useRouter } from "next/router";
 
 export default function LanguageSwitcher(params: { locale: string }) {
-  const router = usePathname().replace('/ar/', '/');
+
+  const paths = usePathname().split('/');
+  const arIndex = paths.indexOf('ar');
+  if (arIndex > -1) {
+    paths.splice(arIndex, 1);
+  }
+  const router = paths.join('/');
   let newLocal = 'en';
   let label = 'English';
   if (params.locale === 'en') {

@@ -1,6 +1,5 @@
 import { ContactService } from '@/shared/services/contact.service';
 import { Fragment } from 'react';
-import NoResults from '../no_results';
 import { IContactItem } from '@/shared/models/contact.model';
 import ContactForm from './contact-form';
 
@@ -45,7 +44,7 @@ export default async function ContactUs(params: { locale: string }) {
           {contacts.slice(1, 3).map((item, index) => (
             <div key={index} className="group">
               <h3 className="title">{item.title}</h3>
-              <p className="value">{item.value}</p>
+              <p className="value" dir='ltr'>{item.value}</p>
             </div>
           ))}
         </div>

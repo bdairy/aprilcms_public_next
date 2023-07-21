@@ -3,12 +3,11 @@ import moment from 'moment';
 import Link from 'next/link';
 import Image from 'next/image';
 import { ISocialLink } from '../../models/social-link';
-import { FooterService } from '../../services/footer.service';
 import FooterLinks from './footer-links';
 import { IFooterGroup } from '@/shared/models/footer/footer-group.model';
 import { useTranslations } from 'next-intl';
 
-export default async function Footer(params: { locale: string; socaialLinks: ISocialLink[], data: IFooterGroup[] }) {
+export default function Footer(params: { locale: string; socaialLinks: ISocialLink[], data: IFooterGroup[] }) {
   const today = moment();
   const { data, socaialLinks } = params;
   const t  = useTranslations('Index')
