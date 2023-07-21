@@ -25,7 +25,20 @@
     "search-news": "Search for news"
   },
   "ContactUs": {
-    "get_direction": "Get Directions"
+    "stay_in_touche": "Stay in touch",
+    "get_direction": "Get Directions",
+    "name": "Name",
+    "email": "Email",
+    "message": "Message",
+    "send": "Send",
+    "name_required": "Name is required",
+    "email_required": "Email is required",
+    "email_invalid": "Email is invalid",
+    "message_required": "Message is required",
+    "message_invalid": "Invalid message, minimum lenght is 20 charachters",
+    "success": "Request is sent successfully",
+    "error": "Something went wrong, please try again later"
+
   }
 
 }

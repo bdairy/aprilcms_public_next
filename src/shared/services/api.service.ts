@@ -26,7 +26,10 @@ export class ApiService {
         body: JSON.stringify(data),
       });
 
-      const res = await result.json();
+      const res = result;//await result.json();
+      if (res.status > 299) {
+        throw res;
+      }
       return res;
     } catch (error) {
       throw error;

@@ -1,15 +1,19 @@
 'use client'
 import { ContactService } from '@/shared/services/contact.service';
+import { useTranslations } from 'next-intl';
 import { useCallback, useState } from 'react';
 import { useGoogleReCaptcha } from 'react-google-recaptcha-v3';
 import { useForm } from 'react-hook-form';
 
 export default function TheForm(params: { locale: string }) {
   const [loading, setLoading] = useState(false);
+  const [isSuccess, setIsSuccess] = useState(false);
+  const [isError, setIsError] = useState(false);
     const {
     register,
     formState: { errors },
-    handleSubmit,
+      handleSubmit,
+    reset
   } = useForm({
     defaultValues: {
       name: '',
@@ -18,11 +22,13 @@ export default function TheForm(params: { locale: string }) {
     },
   });
   const { executeRecaptcha } = useGoogleReCaptcha();
-
+  const t = useTranslations('ContactUs');
 
   const handleSubmitContact = useCallback(
     async (data: any) => {
       setLoading(true);
+      setIsSuccess(false);
+      setIsError(false);
       if (!executeRecaptcha) {
         console.log('Execute recaptcha not yet available');
         setLoading(false);
@@ -31,39 +37,44 @@ export default function TheForm(params: { locale: string }) {
 
     try {
 
-   const token = await executeRecaptcha('contact');
-      console.log(token);
+   const token = await executeRecaptcha('signup');
+
       Object.assign(data, { token: token });
       const service = new ContactService();
       await service.submitContactUs(data, params.locale);
       setLoading(false);
+      setIsSuccess(true);
+      setIsError(false);
+      reset();
     } catch (error) {
       console.log(error);
+      setIsSuccess(false);
+      setIsError(true);
       setLoading(false);
     }
     },
-    [executeRecaptcha, params.locale]
+    [executeRecaptcha, params.locale, reset]
   );
   return (
     <form onSubmit={handleSubmit(handleSubmitContact)}>
       <div className="contact-form">
         <input
           type="text"
-          placeholder="Name"
+          placeholder={t('name')}
           id="name"
           className={errors.name ? 'invalid' : ''}
-          {...register('name', { required: 'Name is required' })}
+          {...register('name', { required: t('name_required') })}
         />
         <div className="text-red-500">{errors.name?.message}</div>
         <input
           type="email"
-          placeholder="Email"
+          placeholder={t('email')}
           id="email"
           className={errors.email ? 'invalid' : ''}
           {...register('email', {
-            required: 'email is required',
+            required: t('email_required'),
             pattern: {
-              message: 'invalid email',
+              message: t('email_invalid'),
               value: /^[a-zA-Z0-9]+@(?:[a-zA-Z0-9]+\.)+[A-Za-z]+$/
             },
           })}
@@ -71,15 +82,15 @@ export default function TheForm(params: { locale: string }) {
          <div className="text-red-500">{errors.email?.message}</div>
 
         <textarea
-          placeholder="Message"
+          placeholder={t('message')}
           id="message"
           className={errors.message ? 'invalid' : ''}
-          {...register('message', { required: 'message required', minLength: {value: 20, message: 'invalid message'} })}></textarea>
+          {...register('message', { required:t('message_required'), minLength: {value: 20, message: t('message_invalid')} })}></textarea>
          <div className="text-red-500">{errors.message?.message}</div>
 
         {!loading && (
           <button type="submit" className={errors.root?.message ? 'disabled' : ''}>
-            Send
+            {t('send')}
           </button>
         )}
         {loading && (
@@ -102,6 +113,8 @@ export default function TheForm(params: { locale: string }) {
             <span className="sr-only">Loading...</span>
           </div>
         )}
+        {isSuccess && <div className='text-green-500'>{t('success') }</div>}
+        {isError && <div className='text-red-500'>{t('error') }</div>}
       </div>
     </form>
   );
