@@ -2,6 +2,7 @@
 import { motion } from 'framer-motion';
 import { ISection } from '../models/page/section.model';
 import  Link  from 'next-intl/link';
+import { useTranslations } from 'next-intl';
 
 export default function WhereWeInvest(params: {
   section: ISection;
@@ -9,13 +10,14 @@ export default function WhereWeInvest(params: {
   codes: string[];
 }) {
   let { section, locale, codes } = params;
+  const t = useTranslations('Index');
 
   return (
     <motion.div className="container where-we-invest">
       <div className="content">
         <h2 className="title">{section.data!.title}</h2>
         <span dangerouslySetInnerHTML={{ __html: section.data!.body ?? '' }}></span>
-        <Link href={'about/mission_and_vision'} locale={locale} className="btn-txt primary">Read more</Link>
+        <Link href={'about/mission_and_vision'} locale={locale} className="btn-txt primary">{t('more')}</Link>
       </div>
       {section.data?.customData && (
         <div className="images">

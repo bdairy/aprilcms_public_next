@@ -17,6 +17,7 @@ const nextConfig = {
     GOOGLE_RECAPTCHA_KEY: '6LdzSJ0mAAAAAEOQo01kWyEaLkJPc96EBhx1tYee'
   },
 
+
 };
 
 module.exports = withNextIntl(nextConfig);
