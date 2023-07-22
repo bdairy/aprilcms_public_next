@@ -1,36 +1,38 @@
-.home-team-members{
-  @apply my-8;
+.team-members{
+  @apply my-8 h-auto pb-12 relative pt-40;
+
+  .bg {
+    @apply absolute w-full sm:h-[75%] h-full bg-beige-500 z-0 top-0;
+  }
+  .wrapper{
+    @apply z-10 flex flex-col items-center justify-start;
 
   .title {
-    @apply w-full text-2xl flex flex-row justify-between items-start mb-4;
+    font-size: 60px;
+    font-weight: bold;
+   @apply tracking-[-3px] z-10 rtl:tracking-normal mb-20;
+    line-height: 0.95;
 
-    a {
-      @apply text-primary-500 text-sm;
-    }
   }
-  .content{
-    @apply sm:h-72 h-auto w-full flex flex-row sm:flex-nowrap flex-wrap;
+  .cards{
+    @apply z-10 h-auto w-full flex flex-row  flex-wrap justify-between;
     .team-member-card{
-      @apply flex-initial  sm:w-1/6 w-1/2 mx-0 my-4 h-full  sm:mx-4 flex flex-col justify-start items-center;
-      &:first-child{
-        @apply sm:ml-0;
-      }
-      &:last-child{
-        @apply sm:mr-0;
-      }
-      .avatar{
-        border-radius: 50%;
-        @apply w-24 h-24 bg-no-repeat bg-cover  transition-all duration-700 opacity-60;
-        &.ng-lazyloaded {
-          opacity: 1;
-        }
+      @apply flex-initial  sm:w-[30%] w-full mb-8  h-full  flex flex-col justify-start items-start;
+
+      .image{
+        @apply aspect-square  w-full mb-4;
+
       }
       .name{
-        @apply  font-semibold text-center;
+        @apply  font-light w-full text-start text-2xl mb-3;
       }
       .position{
-        @apply text-sm font-light text-center;
+        @apply text-lg font-light text-center text-greydark-500;
       }
+
+
     }
+
   }
+}
 }

@@ -23,6 +23,7 @@ import NewsHilights from '../news/highlights/news-highlights';
 import AllNews from '../news/all-news/all-news';
 import NewsDetails from '../news/news-details/news-details';
 import ContactUs from '../contact-us/contact-us';
+import TeamMembers from '../team-members/team-members';
 
 export default function PageSections(params: {
   page: IPage;
@@ -63,6 +64,12 @@ export default function PageSections(params: {
         element = {
           id: section.id,
           element: <TestimonialsSection locale={locale} page={page} section={section} />,
+        };
+        break;
+      case 'team_members':
+        element = {
+          id: section.id,
+          element: <TeamMembers locale={locale} section={section} />,
         };
         break;
       case 'guidline_principles':
