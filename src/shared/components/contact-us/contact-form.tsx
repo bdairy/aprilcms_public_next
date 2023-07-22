@@ -6,7 +6,7 @@ import TheForm from './theform';
 import { useTranslations } from 'next-intl';
 
 export default function ContactForm(params: { position: { lat: any; lng: any }; locale: string }) {
-  const key = process.env.GOOGLE_RECAPTCHA_KEY;
+  const key = process.env.NEXT_PUBLIC_GOOGLE_RECAPTCHA_KEY;
   const t = useTranslations('ContactUs');
 
   return (

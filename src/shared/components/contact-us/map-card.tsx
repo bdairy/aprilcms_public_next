@@ -6,7 +6,7 @@ import Link from 'next/link';
 import { useCallback, useState } from 'react';
 
 export default function MapCard(params: { center: any }) {
-  const key = process.env.GOOGLE_MAP_API_KEY;
+  const key = process.env.NEXT_PUBLIC_GOOGLE_MAP_API_KEY;
   const { center } = params;
   const containerStyle = {
     width: '100%',
