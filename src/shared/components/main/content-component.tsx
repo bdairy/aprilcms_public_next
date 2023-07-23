@@ -5,6 +5,7 @@ import WhereWeInvest from '../where-we-invest';
 import AppleLearningProvider from '../apple-learning-provider';
 import OurPrinciples from '../about/our-principles';
 import LetterFromCEO from '../about/letter-from-ceo';
+import AppleContactUs from '../apple-contact-us';
 
 export default function ContentComponent(params: {
   section: ISection;
@@ -61,6 +62,9 @@ export default function ContentComponent(params: {
       break;
     case 'ms._mariam_saqer':
       element = <LetterFromCEO section={section} locale={locale} />;
+      break;
+    case 'apple_contact_us':
+      element = <AppleContactUs section={section} locale={locale} codes={codes} />;
       break;
 
     default:
