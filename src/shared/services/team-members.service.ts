@@ -9,7 +9,7 @@ export class TeamMemberssService {
   async getTeamMembers(pageSize: number = 20,locale: string): Promise<ITeamMember[]> {
     try {
       const api = new ApiService();
-      const result = await api.getData(`${this.root}?PageIndex=1&PageSize=6`, { 'Accept-Language': locale });
+      const result = await api.getData(`${this.root}?PageIndex=1&PageSize=${pageSize}`, { 'Accept-Language': locale });
       if (result) {
         const members = TeamMember.fromEntityListResult(result.items);
         return members;

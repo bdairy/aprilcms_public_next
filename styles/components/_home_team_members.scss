@@ -2,7 +2,7 @@
   @apply my-8 h-auto pb-12 relative pt-40;
 
   .bg {
-    @apply absolute w-full sm:h-[75%] h-full bg-beige-500 z-0 top-0;
+    @apply absolute w-full sm:h-[80%] h-full bg-beige-500 z-0 top-0;
   }
   .wrapper{
     @apply z-10 flex flex-col items-center justify-start;
@@ -27,7 +27,7 @@
         @apply  font-light w-full text-start text-2xl mb-3;
       }
       .position{
-        @apply text-lg font-light text-center text-greydark-500;
+        @apply text-lg font-light text-start text-greydark-500;
       }
 
 
