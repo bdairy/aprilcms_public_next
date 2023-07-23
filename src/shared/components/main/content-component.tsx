@@ -22,6 +22,9 @@ export default function ContentComponent(params: {
     case 'our_vision':
     case 'academy_vision':
     case 'global_citizinship':
+    case 'certified_trainers':
+    case 'for_educators':
+    case 'for_parents':
       element = (
         <ContentWithImage
           section={section}
@@ -35,6 +38,10 @@ export default function ContentComponent(params: {
     case 'our_mission':
     case 'academy_mission':
     case 'high-quality_learning':
+    case 'professional_learnin':
+    case 'supporting_your_visi':
+    case 'for_education_leader':
+    case 'for_students':
       element = <ContentWithImage section={section} locale={locale} codes={codes} />;
       break;
 
@@ -44,28 +51,20 @@ export default function ContentComponent(params: {
       );
       break;
     case 'where_we_invest':
-      element = (
-        <WhereWeInvest section={section}  locale={locale} codes={codes} />
-      );
+      element = <WhereWeInvest section={section} locale={locale} codes={codes} />;
       break;
     case 'apple_professional_learning_provider':
-      element = (
-        <AppleLearningProvider section={section}  locale={locale}  />
-      );
+      element = <AppleLearningProvider section={section} locale={locale} />;
       break;
     case 'our_principles':
-      element = (
-        <OurPrinciples section={section}  locale={locale}  />
-      );
+      element = <OurPrinciples section={section} locale={locale} />;
       break;
     case 'ms._mariam_saqer':
-      element = (
-        <LetterFromCEO section={section}  locale={locale}  />
-      );
+      element = <LetterFromCEO section={section} locale={locale} />;
       break;
 
     default:
-      element = <BasicContent codes={codes} locale={locale} section={section} ></BasicContent>;
+      element = <BasicContent codes={codes} locale={locale} section={section}></BasicContent>;
       break;
   }
 

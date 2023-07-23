@@ -17,7 +17,7 @@ export default function WhereWeInvest(params: {
       <div className="content">
         <h2 className="title">{section.data!.title}</h2>
         <span dangerouslySetInnerHTML={{ __html: section.data!.body ?? '' }}></span>
-        <Link href={'about/mission_and_vision'} locale={locale} className="btn-txt primary">{t('more')}</Link>
+        {/* <Link href={'about/mission_and_vision'} locale={locale} className="btn-txt primary">{t('more')}</Link> */}
       </div>
       {section.data?.customData && (
         <div className="images">

@@ -3,6 +3,7 @@ import { LanguageObject } from '@/shared/models/languange-object.model';
 import { ISection } from '@/shared/models/page/section.model';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
+import Link from 'next/link';
 
 export default function OurSchools(params: { section: ISection; locale: string }) {
   const { section, locale } = params;
@@ -14,12 +15,12 @@ export default function OurSchools(params: { section: ISection; locale: string }
 
       <div className="images">
         {section.data?.customData.data.map((d: any, index: number) => (
-          <div key={index} className="image">
+          <Link href={d.externalLink} target='_blank' key={index} className="image">
             <Image src={d.image} alt={LanguageObject.getValue(d.text, locale)} width={200} height={200}></Image>
             <div className="overlay">
               <div className="text">{LanguageObject.getValue(d.text, locale)}</div>
             </div>
-          </div>
+          </Link>
         ))}
       </div>
     </motion.div>

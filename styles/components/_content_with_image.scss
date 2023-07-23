@@ -15,6 +15,10 @@
 
   &.text-on-the-left{
     @apply sm:flex-row-reverse;
+    .image{
+      flex-direction: row;
+      justify-content: flex-end;
+    }
   }
 
 
@@ -22,6 +26,9 @@
     width: 50%;
     height: auto;
     position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
 
     .top-right {
       height: 15%;

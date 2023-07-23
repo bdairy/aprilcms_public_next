@@ -2,7 +2,10 @@
   height: 460px;
   width: 100%;
   @apply flex flex-col items-start justify-center bg-no-repeat;
-  background-size: 100%;
+  background-size: cover;
+  background-position: 0 50%;
+  background-color: rgba(0,0,0,0.2);
+  background-blend-mode: darken;
 
 
   .title {
