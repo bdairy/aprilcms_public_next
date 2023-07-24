@@ -1,6 +1,6 @@
 import { INewsItem } from '@/shared/models/news-item';
 import moment from 'moment';
-import Link from 'next/link';
+import Link from 'next-intl/link';
 
 export default function NewsHighlightCard(params: { item: INewsItem; locale: string }) {
   const { item, locale } = params;

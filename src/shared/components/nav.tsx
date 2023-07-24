@@ -1,5 +1,5 @@
 'use client';
-import Link from 'next/link';
+import Link from 'next-intl/link';
 import Image from 'next/image';
 import { Fragment, useEffect, useRef } from 'react';
 import LanguageSwitcher from './language-switcher';
@@ -133,7 +133,7 @@ export default function Nav(params: { menu: IMenuItem[]; locale: string }) {
         <div className="wrapper">
           <div className="header-item-left">
             <h1>
-              <Link href="/" className="brand" />
+              <Link href={"/"} className="brand" />
             </h1>
           </div>
 

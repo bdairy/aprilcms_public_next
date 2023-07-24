@@ -1,7 +1,7 @@
 import { truncate } from '@/shared/helpers/truncate';
 import { IOurServices } from '@/shared/models/our_services.model';
 import { useTranslations } from 'next-intl';
-import Link from 'next/link';
+import Link from 'next-intl/link';
 
 export default function ServiceCard(params: {
   service: IOurServices;

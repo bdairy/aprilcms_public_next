@@ -3,7 +3,7 @@ import { LanguageObject } from '@/shared/models/languange-object.model';
 import { ISection } from '@/shared/models/page/section.model';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
-import Link from 'next/link';
+import Link from 'next-intl/link';
 
 export default function OurSchools(params: { section: ISection; locale: string }) {
   const { section, locale } = params;

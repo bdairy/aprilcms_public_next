@@ -1,6 +1,6 @@
 'use client';
 import moment from 'moment';
-import Link from 'next/link';
+import Link from 'next-intl/link';
 import Image from 'next/image';
 import { ISocialLink } from '../../models/social-link';
 import FooterLinks from './footer-links';

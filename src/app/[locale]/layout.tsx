@@ -43,7 +43,8 @@ export default async function RootLayout({
   children: React.ReactNode;
   params: any;
 }) {
-  const locale = useLocale();
+  //const locale = useLocale();
+  const { locale } = params;
   let messages;
   try {
     messages = (await import(`/messages/${locale}.json`)).default;

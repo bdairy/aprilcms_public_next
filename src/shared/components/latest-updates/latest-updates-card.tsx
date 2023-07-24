@@ -1,6 +1,6 @@
 import { INewsItem } from '@/shared/models/news-item';
 import moment from 'moment';
-import Link from 'next/link';
+import Link from 'next-intl/link';
 
 export default function LatestUpadtesCard(params: { item: INewsItem }) {
   const { item } = params;

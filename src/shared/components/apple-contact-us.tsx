@@ -26,7 +26,7 @@ export default function AppleContactUs(params: {
 
         <div className="body" dangerouslySetInnerHTML={{ __html: section.data!.body ?? '' }}></div>
         {section.data?.link && (
-          <Link href="{{data.link}}" className="text-primary-500 cursor-pointer" locale={locale}>
+          <Link href={section.data?.link} className="text-primary-500 cursor-pointer" locale={locale}>
             {section.data?.linkTitle}
           </Link>
         )}

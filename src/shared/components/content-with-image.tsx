@@ -2,7 +2,7 @@
 import { Fragment } from 'react';
 import { ISection } from '../models/page/section.model';
 import Image from 'next/image';
-import Link from 'next/link';
+import Link from 'next-intl/link';
 import { motion } from 'framer-motion';
 export type textPosition = 'start' | 'end';
 export default function ContentWithImage(params: {

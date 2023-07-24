@@ -1,7 +1,7 @@
 'use client';
 
 import { useTranslations } from 'next-intl';
-import Link from 'next/link';
+import Link from 'next-intl/link';
 import Image from 'next/image';
 import { usePathname, useRouter } from 'next/navigation';
 import getURL from '@/shared/helpers/getUrl';

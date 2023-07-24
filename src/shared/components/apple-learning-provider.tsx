@@ -1,7 +1,7 @@
 'use client';
 import { motion } from "framer-motion";
 import Image from 'next/image';
-import Link from 'next/link';
+import Link from 'next-intl/link';
 import { ISection } from "../models/page/section.model";
 import { Fragment } from "react";
 

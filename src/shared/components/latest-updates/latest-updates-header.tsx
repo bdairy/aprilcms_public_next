@@ -5,6 +5,6 @@ export default function LatestUpdatesHeader() {
   const t = useTranslations('Index');
   return ( <div className="title">
   <h2>{t('latest-news')}</h2>
-  <Link href="/latest_updates" className="view-all" >{t('view-all')}</Link>
+    <Link href={'/latest_updates'} className="view-all" >{t('view-all')}</Link>
 </div>);
 }

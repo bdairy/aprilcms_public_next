@@ -2,7 +2,7 @@
 
 import { useJsApiLoader, GoogleMap, Marker, InfoWindow } from '@react-google-maps/api';
 import { useTranslations } from 'next-intl';
-import Link from 'next/link';
+import Link from 'next-intl/link';
 import { useCallback, useState } from 'react';
 
 export default function MapCard(params: { center: any }) {
