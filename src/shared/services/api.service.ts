@@ -1,11 +1,13 @@
 import { OutgoingHttpHeader } from 'http';
 
 export class ApiService {
-  root = 'https://aprilcmspublicapi.azurewebsites.net/api/v1/';
+  root = process.env.NEXT_PUBLIC_API_ROOT;
+  revalidateTime = parseInt(process.env.NEXT_PUBLIC_CASH_TIME ?? '3600');
 
-  async getData(url: string, options: any) {
+  async getData(url: string, options: any, revalidate: number = this.revalidateTime) {
     try {
-      const result = await fetch(`${this.root}${url}`, { cache: 'no-store', headers: options });
+      const result = await fetch(`${this.root}${url}`,
+        {  next: {revalidate: revalidate}, headers: options });
 
       const res = await result.json();
       return res;
@@ -18,7 +20,6 @@ export class ApiService {
       //  Object.assign(options, { 'Accept': '*/*', 'Content-Type': 'application/json' });
       //   let headers: OutgoingHttpHeader = new OutGoin;
       const result = await fetch(`${this.root}${url}`, {
-        cache: 'no-store',
         headers: {
           'Content-Type': 'application/json',
         },

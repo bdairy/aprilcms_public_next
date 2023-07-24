@@ -4,11 +4,12 @@ import { ApiService } from './api.service';
 
 export class NewsService {
   root = 'news';
+  revalidateTime = 600;
 
   async getLatestNews(locale: string): Promise<INewsItem[]> {
     try {
       const api = new ApiService();
-      const result = await api.getData(`${this.root}`, { 'Accept-Language': locale });
+      const result = await api.getData(`${this.root}`, { 'Accept-Language': locale }, this.revalidateTime);
       if (result) {
         const news = NewsItem.fromEntityListResult(result.items);
         return news;
@@ -24,7 +25,7 @@ export class NewsService {
       const api = new ApiService();
       const result = await api.getData(`${this.root}?PageIndex=1&PageSize=3`, {
         'Accept-Language': locale,
-      });
+      }, this.revalidateTime);
       if (result) {
         const news = NewsItem.fromEntityListResult(result.items);
         return news;
@@ -45,7 +46,7 @@ export class NewsService {
       const api = new ApiService();
       const result = await api.getData(`${this.root}?PageIndex=${pageIndex}&PageSize=${pageSize}&KeyWord=${text}`, {
         'Accept-Language': locale,
-      });
+      },this.revalidateTime);
       if (result) {
         const news =    ApiResult.fromEntityResult<INewsItem[]>(
           result,
@@ -62,7 +63,7 @@ export class NewsService {
   async getNewsById(id: string, locale: string): Promise<INewsItem | null> {
     try {
       const api = new ApiService();
-      const result = await api.getData(`${this.root}/${id}`, { 'Accept-Language': locale });
+      const result = await api.getData(`${this.root}/${id}`, { 'Accept-Language': locale }, this.revalidateTime);
       if (result) {
         const news = NewsItem.fromEntityResult(result);
         return news;
