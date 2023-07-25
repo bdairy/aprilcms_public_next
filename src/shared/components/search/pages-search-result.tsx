@@ -20,7 +20,7 @@ export default async function PagesSearchResult(params: {
     return (
       currentItems &&
       currentItems.map((item) => (
-        <div className="item">
+        <div className="item" key={item.id}>
           <div className="icon"></div>
           <Link key={item.id} className='name' href={item.state} locale={locale}>
             {item.title}
