@@ -1,13 +1,67 @@
-.basic-content{
+.basic-content {
   @apply mb-20;
-  .title{
+
+  .title {
     font-size: 24px;
     font-weight: bold;
     margin-bottom: 66px;
   }
-  .body{
+
+  .body {
     @apply text-greydark-500 text-xl;
     letter-spacing: 0;
     margin-bottom: 32px;
+
+    .ql-indent-1{
+      @apply ml-4 rtl:ml-0 rtl:mr-4;
+    }
+
+    ul {
+
+      li {
+        @apply text-greydark-500 text-xl;
+
+        &::before {
+          content: "\2022";
+          /* Add content: \2022 is the CSS Code/unicode for a bullet */
+          @apply text-primary-500 ml-[-1em] rtl:ml-0 rtl:mr-[-1em];
+          /* Change the color */
+          font-weight: bold;
+          /* If you want it to be bold */
+          display: inline-block;
+          /* Needed to add space between the bullet and the text */
+          width: 1em;
+          /* Also needed for space (tweak if needed) */
+          margin-left: -1em;
+          /* Also needed for space (tweak if needed) */
+        }
+      }
+    }
+
+    ol {
+
+      li {
+        @apply text-greydark-500 text-xl;
+        ul{
+          @apply ml-4 rtl:ml-0 rtl:mr-4;
+        }
+
+        &::before {
+          content: "\2022";
+          /* Add content: \2022 is the CSS Code/unicode for a bullet */
+          @apply text-primary-500 ml-[-1em] rtl:ml-0 rtl:mr-[-1em];
+          /* Change the color */
+          font-weight: bold;
+          /* If you want it to be bold */
+          display: inline-block;
+          /* Needed to add space between the bullet and the text */
+          width: 1em;
+          /* Also needed for space (tweak if needed) */
+
+          /* Also needed for space (tweak if needed) */
+        }
+      }
+    }
+
   }
 }

@@ -102,11 +102,10 @@
         @apply text-greydark-500 text-xl;
       &::before {
         content: "\2022";  /* Add content: \2022 is the CSS Code/unicode for a bullet */
-       @apply text-primary-500; /* Change the color */
+       @apply text-primary-500 ml-[-1em] rtl:ml-0 rtl:mr-[-1em]; /* Change the color */
         font-weight: bold; /* If you want it to be bold */
         display: inline-block; /* Needed to add space between the bullet and the text */
         width: 1em; /* Also needed for space (tweak if needed) */
-        margin-left: -1em; /* Also needed for space (tweak if needed) */
       }
       }
   }

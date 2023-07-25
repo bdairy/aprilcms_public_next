@@ -20,14 +20,7 @@ export default function Footer(params: { locale: string; socaialLinks: ISocialLi
         <div className="menu-wrapper">
           {data && <FooterLinks data={data} locale={params.locale}></FooterLinks>}
 
-          <div className="menu-block">
-            <div className="title">Site Links</div>
-            <ul className="links-col">
-              <li className="link">Copyrights {today.format('YYYY')}</li>
-              <li className="link">Terms & Conditions</li>
-              <li className="link">Sitemap</li>
-            </ul>
-          </div>
+
         </div>
         <div className="last-line">
           <div className="social-links">

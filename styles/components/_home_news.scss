@@ -56,11 +56,11 @@ $bgScale: 1.25;
             @apply p-4 flex flex-col justify-end transition-all duration-700;
 
             .date {
-              @apply text-sm text-white;
+              @apply text-sm text-white  text-left rtl:text-right;
             }
 
             h2 {
-              @apply text-2xl text-white font-semibold text-ellipsis transition-all duration-700;
+              @apply text-2xl text-white  text-left rtl:text-right font-semibold text-ellipsis transition-all duration-700;
               overflow: hidden;
 
               text-overflow: ellipsis;
@@ -71,7 +71,7 @@ $bgScale: 1.25;
             }
 
             p {
-              @apply text-sm text-white font-light h-0 transition-max-height max-h-0 duration-700;
+              @apply text-sm text-white font-light text-left rtl:text-right h-0 transition-max-height max-h-0 duration-700;
               overflow: hidden;
               text-overflow: ellipsis;
               white-space: initial;

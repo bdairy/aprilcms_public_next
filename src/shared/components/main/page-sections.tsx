@@ -24,6 +24,7 @@ import AllNews from '../news/all-news/all-news';
 import NewsDetails from '../news/news-details/news-details';
 import ContactUs from '../contact-us/contact-us';
 import TeamMembers from '../team-members/team-members';
+import SearchWebsite from '../search/search';
 
 export default function PageSections(params: {
   page: IPage;
@@ -160,6 +161,12 @@ export default function PageSections(params: {
         element = {
           id: section.id,
           element: <ContactUs  locale={locale} />,
+        };
+        break;
+      case 'search':
+        element = {
+          id: section.id,
+          element: <SearchWebsite  locale={locale} searchParams={searchParams ?? {}} />,
         };
         break;
 

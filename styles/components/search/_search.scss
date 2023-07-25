@@ -1,0 +1,79 @@
+.search-page {
+  .wrapper {
+    @apply flex flex-col items-center justify-start;
+
+    .search-header {
+      @apply sm:h-[460px] w-full h-auto bg-beige-500;
+
+      .container {
+        @apply flex flex-col items-start justify-center h-full;
+
+
+        .title h2 {
+          font-size: 60px;
+          font-weight: bold;
+          @apply tracking-[-3px] text-primary-900 z-10 rtl:tracking-normal mb-20 mt-20 sm:mt-0;
+          line-height: 0.95;
+
+        }
+
+        .search-box {
+          box-shadow: 0px 3px 6px #4B2D2F1A;
+          @apply w-full bg-white h-14 rounded-lg items-center justify-center flex flex-row gap-8 px-8 mb-10;
+
+          .icon {
+            background-image: url('/images/icons/icon_search.svg');
+            background-repeat: no-repeat;
+            background-size: contain;
+            width: 25px;
+            height: 25px;
+          }
+
+          input {
+            border: none;
+            background-color: transparent;
+            width: 100%;
+            height: 100%;
+            @apply text-gray-500 text-lg;
+
+            &:focus {
+              border: none;
+              outline: none;
+              @apply ring-0;
+
+            }
+          }
+        }
+      }
+
+    }
+
+    .pages-search-result {
+      @apply bg-beige-300 w-full py-8;
+
+      .container {
+        .pages-title {
+          @apply text-greydark-500 text-xl mb-12;
+        }
+
+        .pages-list {
+          .item {
+            @apply flex flex-row gap-2 items-center justify-start;
+
+            .icon {
+              @apply w-[15px] h-4 bg-no-repeat mr-2 bg-contain rtl:rotate-180;
+              background-image: url('/images/icons/chev-forward-primary.svg');
+            }
+
+            .name {
+              @apply font-bold text-[30px]
+            }
+          }
+        }
+      }
+    }
+    .all-news{
+      @apply w-full;
+    }
+  }
+}

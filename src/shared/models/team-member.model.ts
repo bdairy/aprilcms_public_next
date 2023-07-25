@@ -3,15 +3,15 @@ import { LanguageObject } from "./languange-object.model";
 export interface ITeamMember {
   id: string;
   image: string;
-  name: LanguageObject;
-  position: LanguageObject;
+  name: string;
+  position: string;
 }
 export class TeamMember {
   static fromEntityResult(entity: any): ITeamMember {
     const member: ITeamMember = {
       id: entity.id,
-      name: LanguageObject.fromFields(entity.name.ar, entity.name.en),
-      position: LanguageObject.fromFields(entity.position.ar, entity.position.en),
+      name: entity.name,
+      position: entity.position,
       image: entity.avatar,
     };
     return member;

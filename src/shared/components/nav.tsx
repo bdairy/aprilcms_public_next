@@ -126,14 +126,13 @@ export default function Nav(params: { menu: IMenuItem[]; locale: string }) {
     return item.children && item.children.length > 0;
   };
 
-
   return (
     <header ref={headerRef} className="header">
       <div className="container mx-auto px-4">
         <div className="wrapper">
           <div className="header-item-left">
             <h1>
-              <Link href={"/"} className="brand" />
+              <Link href={'/'} className="brand" />
             </h1>
           </div>
 
@@ -205,13 +204,15 @@ export default function Nav(params: { menu: IMenuItem[]; locale: string }) {
 
           <div className="header-item-right">
             <LanguageSwitcher locale={params.locale} />
-            <Image
-              src="/images/icons/icon_search.svg"
-              width={20}
-              height={20}
-              alt="Search"
-              className="mx-4"
-            />
+            <Link href={'/search_page'} title='Search'>
+              <Image
+                src="/images/icons/icon_search.svg"
+                width={20}
+                height={20}
+                alt="Search"
+                className="mx-4"
+              />
+            </Link>
             <button type="button" ref={menuMobileTriggerRef} className="menu-mobile-trigger">
               <span></span>
               <span></span>

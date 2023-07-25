@@ -17,7 +17,7 @@ const nextConfig = {
     NEXT_PUBLIC_GOOGLE_RECAPTCHA_KEY: '6LdzSJ0mAAAAAEOQo01kWyEaLkJPc96EBhx1tYee',
     NEXT_PUBLIC_TEAM_MEMBERS_COUNT: 9,
     NEXT_PUBLIC_API_ROOT: 'https://aprilcmspublicapi.azurewebsites.net/api/v1/',
-    NEXT_PUBLIC_CASH_TIME: 3600
+    NEXT_PUBLIC_CASH_TIME: 0
   },
 
 

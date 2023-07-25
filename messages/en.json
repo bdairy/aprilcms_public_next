@@ -40,6 +40,12 @@
     "success": "Request is sent successfully",
     "error": "Something went wrong, please try again later"
 
+  },
+  "Search": {
+    "search-website-title": "Search Website",
+    "search-website-input": "Type anything",
+    "pages": "Pages",
+    "news": "News"
   }
 
 }

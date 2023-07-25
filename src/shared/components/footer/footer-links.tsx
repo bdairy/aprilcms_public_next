@@ -29,7 +29,7 @@ export default function FooterLinks(params: { data: IFooterGroup[]; locale: stri
     }
 
     return (
-      <Link href={url} locale={params.locale}>
+      <Link href={url} title={item.value}>
         {item.value}
       </Link>
     );
