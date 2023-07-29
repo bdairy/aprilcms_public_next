@@ -1,4 +1,3 @@
-
 import { IMetaTags, MetaTags } from './meta-tags.model';
 import { ISectionMedia } from './section-media.model';
 import { ISection, Section } from './section.model';
@@ -21,6 +20,7 @@ export interface IPage {
   id: string;
   title: string;
   state: string;
+  code: string;
   metaTags: IMetaTags | null;
   template: IPageTemplate;
   sections: ISection[];
@@ -28,16 +28,22 @@ export interface IPage {
 }
 export class Page {
   static fromEntityResult(entity: any): IPage {
+    let getState = (page: any) => {
+      if (page.parent && page.parent.code) {
+        return `${page.parent.code}/${entity.state ?? entity.url}`;
+      } else {
+        return entity.state ?? entity.url;
+      }
+    };
     const p: IPage = {
       id: entity.id,
       coverImageUrl: entity.coverImageUrl,
-      metaTags: entity.metaTags
-        ? MetaTags.fromEntityResult(entity.metaTags)
-        : null,
+      metaTags: entity.metaTags ? MetaTags.fromEntityResult(entity.metaTags) : null,
       sections: Section.fromEntityListResult(entity.sections),
-      state: entity.state ?? entity.url,
+      code: entity.state ?? entity.url,
+      state: getState(entity),
       title: entity.title,
-      template: entity.pageTemplate
+      template: entity.pageTemplate,
     };
     return p;
   }

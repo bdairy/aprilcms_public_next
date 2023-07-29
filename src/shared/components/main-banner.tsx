@@ -7,7 +7,7 @@ export default async function MainBanner(params: { section: ISection; locale: st
   return (
     <div className="home-banner bg-gray-300">
       {banner && (
-        <video autoPlay={true} loop={true} muted>
+        <video autoPlay={true} loop={false} muted>
           <source src={banner.video!} type="video/mp4" />
         </video>
       )}

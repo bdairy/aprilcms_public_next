@@ -6,7 +6,7 @@ import TestimonialsCaresoul from "./testimonials-caresoul";
 
 export default async function TestimonialsSection(params: { page: IPage, section: ISection, locale: string; }) {
   const service = new TestimonialsService();
-  const testimonialsItems = await service.getTestimonialsByPageCode(params.page.state, params.locale);
+  const testimonialsItems = await service.getTestimonialsByPageCode(params.page.code, params.locale);
   return (
     <div className="testimonials" data-aos="fade-up">
     <div className="wrapper container">

@@ -167,8 +167,8 @@ export default function Nav(params: { menu: IMenuItem[]; locale: string }) {
                           {item.children.map((sub) => (
                             <li key={sub.id}>
                               <Link
-                                className={activeClass(`${item.state}/${sub.state}`)}
-                                href={`/${item.state}/${sub.state}`}>
+                                className={activeClass(`${sub.state}`)}
+                                href={`/${sub.state}`}>
                                 {sub.title}
                               </Link>
                             </li>
@@ -186,7 +186,7 @@ export default function Nav(params: { menu: IMenuItem[]; locale: string }) {
                             <ul>
                               {sub.children?.map((m) => (
                                 <li key={m.id}>
-                                  <Link href={`${item.state}/${sub.state}/${m.state}`}>
+                                  <Link href={`${m.state}`}>
                                     {m.title}
                                   </Link>
                                 </li>
