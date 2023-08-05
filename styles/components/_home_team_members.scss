@@ -1,38 +1,52 @@
-.team-members{
-  @apply my-8 h-auto pb-12 relative pt-40;
+.team-members {
+  @apply mt-8 h-auto pb-12 relative pt-40;
 
   .bg {
-    @apply absolute w-full sm:h-[80%] h-full bg-beige-500 z-0 top-0;
+    @apply absolute w-full  h-full bg-beige-500 z-0 top-0;
   }
-  .wrapper{
+
+  .wrapper {
     @apply z-10 flex flex-col items-center justify-start;
 
-  .title {
-    font-size: 60px;
-    font-weight: bold;
-   @apply tracking-[-3px] z-10 rtl:tracking-normal mb-20;
-    line-height: 0.95;
-
-  }
-  .cards{
-    @apply z-10 h-auto w-full flex flex-row  flex-wrap justify-between;
-    .team-member-card{
-      @apply flex-initial  sm:w-[30%] w-full mb-8  h-full  flex flex-col justify-start items-start;
-
-      .image{
-        @apply aspect-square  w-full mb-4;
-
-      }
-      .name{
-        @apply  font-light w-full text-start text-2xl mb-3;
-      }
-      .position{
-        @apply text-lg font-light text-start text-greydark-500;
-      }
-
+    .title {
+      font-size: 60px;
+      font-weight: bold;
+      @apply tracking-[-3px] z-10 rtl:tracking-normal mb-20;
+      line-height: 0.95;
 
     }
 
+    .cards {
+      @apply z-10 h-auto w-full flex flex-row flex-wrap justify-between;
+
+      .team-member-card {
+        @apply flex-initial sm:w-[48%] w-full bg-white mb-8 sm:h-[200px] h-auto
+        flex
+        sm:flex-row  sm:justify-between sm:p-0 p-4 gap-4 sm:items-start
+        justify-center flex-col-reverse items-center
+        ;
+        box-shadow: 0px 10px 30px #4B2D2F1A;
+
+
+        .image {
+          @apply aspect-square  w-[200px] h-[200px] object-contain;
+
+        }
+
+        .content {
+          @apply flex flex-col sm:items-start items-center justify-center h-full w-full sm:px-8 px-0 ;
+          .name {
+            @apply font-light sm:text-start text-center text-2xl mb-3;
+          }
+
+          .position {
+            @apply text-lg font-light sm:text-start text-center text-greydark-500;
+          }
+        }
+
+
+      }
+
+    }
   }
-}
 }
