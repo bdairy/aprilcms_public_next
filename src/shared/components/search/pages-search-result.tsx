@@ -14,12 +14,12 @@ export default async function PagesSearchResult(params: {
   const {  keyword, locale } = params;
   const pagesService = new PagesService();
   const t = useTranslations('Search');
-  const pages = await pagesService.search(keyword, locale);
+  const pages = await pagesService.search(locale, keyword, 5);
   function Items(params: { currentItems: IPage[] }) {
     const { currentItems } = params;
     return (
       currentItems &&
-      currentItems.map((item) => (
+      currentItems.splice(0,5).map((item) => (
         <div className="item" key={item.id}>
           <div className="icon"></div>
           <Link key={item.id} className='name' href={item.state} locale={locale}>

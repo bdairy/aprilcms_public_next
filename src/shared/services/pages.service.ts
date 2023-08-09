@@ -21,22 +21,18 @@ export class PagesService {
     }
   }
 
-  async search(
-    text: string = '',
-
-    locale: string
-  ): Promise<IPage[] | null> {
+  async search(locale: string, text: string = '', pageSize: number = 5): Promise<IPage[] | null> {
     try {
       const api = new ApiService();
       const result = await api.getData(
-        `${this.url}/search?KeyWord=${text}`,
+        `${this.url}/search?KeyWord=${text}&pageSize=${pageSize}&pageIndex=1`,
         {
           'Accept-Language': locale,
         },
         this.revalidateTime
       );
       if (result) {
-        const news = Page.fromEntityListResult(result);
+        const news = Page.fromEntityListResult(result.items);
 
         return news;
       } else {

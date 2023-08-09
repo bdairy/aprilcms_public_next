@@ -1,7 +1,7 @@
 .testimonials {
 
   height: 730px;
-  @apply bg-beige-500;
+  @apply bg-beige-500 mb-12 sm:mb-0;
 
   .wrapper {
     @apply flex flex-col justify-start sm:flex-row sm:justify-center items-center w-full h-full;

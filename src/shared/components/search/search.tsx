@@ -22,7 +22,7 @@ export default function SearchWebsite(params: {
           keyword={keyword}
           pageIndex={parseInt(`${pageIndex}`)}
           pageSize={parseInt(`${pageSize}`)}></PagesSearchResult>
-        <div className="all-news">
+        {/* <div className="all-news">
           <div className="container">
             <div className="title">
               <h2>{t('news')}</h2>
@@ -33,7 +33,7 @@ export default function SearchWebsite(params: {
               pageIndex={parseInt(`${pageIndex}`)}
               pageSize={parseInt(`${pageSize}`)}></AllNewsSearchResult>
           </div>
-        </div>
+        </div> */}
       </div>
     </div>
   );
