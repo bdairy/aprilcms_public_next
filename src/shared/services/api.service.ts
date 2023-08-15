@@ -1,13 +1,13 @@
-
-
 export class ApiService {
   root = process.env.NEXT_PUBLIC_API_ROOT;
   revalidateTime = parseInt(process.env.NEXT_PUBLIC_CASH_TIME ?? '3600');
 
   async getData(url: string, options: any, revalidate: number = this.revalidateTime) {
     try {
-      const result = await fetch(`${this.root}${url}`,
-        {  next: {revalidate: revalidate}, headers: options });
+      const result = await fetch(`${this.root}${url}`, {
+        next: { revalidate: revalidate },
+        headers: options,
+      });
 
       const res = await result.json();
       return res;
@@ -27,7 +27,7 @@ export class ApiService {
         body: JSON.stringify(data),
       });
 
-      const res = result;//await result.json();
+      const res = result; //await result.json();
       if (res.status > 299) {
         throw res;
       }
