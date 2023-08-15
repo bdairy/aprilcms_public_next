@@ -16,7 +16,7 @@ const nextConfig = {
     NEXT_PUBLIC_SITE_URL: 'http://localhost:3000',
     NEXT_PUBLIC_GOOGLE_RECAPTCHA_KEY: '6LdzSJ0mAAAAAEOQo01kWyEaLkJPc96EBhx1tYee',
     NEXT_PUBLIC_TEAM_MEMBERS_COUNT: 20,
-    NEXT_PUBLIC_API_ROOT: 'https://aprilcmspublicapi.azurewebsites.net/api/v1/',
+    NEXT_PUBLIC_API_ROOT: 'http://89.117.62.130:6543/api/v1/',
     NEXT_PUBLIC_CASH_TIME: 0
   },
 
