@@ -1,4 +1,5 @@
 export class ApiService {
+  //Push
   root = process.env.NEXT_PUBLIC_API_ROOT;
   revalidateTime = parseInt(process.env.NEXT_PUBLIC_CASH_TIME ?? '3600');
 

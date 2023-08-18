@@ -23,6 +23,7 @@ export default async function Home({ params }: { params: { locale: string; codes
         <PageSections page={page!} locale={params.locale} codes={['']} id={null} />
       </div>
       <Footer socaialLinks={socialLinks ?? []} data={footerData ?? []} locale={params.locale}></Footer>
+      aprilit
     </Fragment>
   );
 }
