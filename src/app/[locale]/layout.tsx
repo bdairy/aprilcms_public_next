@@ -1,6 +1,5 @@
 import '../globals.css';
 import 'styles/main.scss';
-import { useLocale } from 'next-intl';
 import { notFound } from 'next/navigation';
 
 import { NextIntlClientProvider } from 'next-intl';
