@@ -204,7 +204,7 @@ export default function Nav(params: { menu: IMenuItem[]; locale: string }) {
 
           <div className="header-item-right">
             <LanguageSwitcher locale={params.locale} />
-            <Link href={'/search_page'} title='Search'>
+            {/* <Link href={'/search_page'} title='Search'>
               <Image
                 src="/images/icons/icon_search.svg"
                 width={20}
@@ -212,7 +212,7 @@ export default function Nav(params: { menu: IMenuItem[]; locale: string }) {
                 alt="Search"
                 className="mx-4"
               />
-            </Link>
+            </Link> */}
             <button type="button" ref={menuMobileTriggerRef} className="menu-mobile-trigger">
               <span></span>
               <span></span>

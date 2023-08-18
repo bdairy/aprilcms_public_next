@@ -14,8 +14,8 @@ export default function TestimonialsCaresoul(params: { items: ITestimonial[], lo
     speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
-    autoplay: false,
-    autoplaySpeed: 2000,
+    autoplay: true,
+    autoplaySpeed: 3000,
     rtl: params.locale === 'en' ? false : true,
     customPaging: (i: number) => <span></span>
 

@@ -36,7 +36,7 @@
     "email_required": "Email is required",
     "email_invalid": "Email is invalid",
     "message_required": "Message is required",
-    "message_invalid": "Invalid message, minimum lenght is 20 charachters",
+    "message_invalid": "Invalid message, minimum length is 20 characters",
     "success": "Request is sent successfully",
     "error": "Something went wrong, please try again later"
 
