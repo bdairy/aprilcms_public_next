@@ -24,7 +24,7 @@ export default function TrainingCertificates(params: { section: ISection; locale
         <div className="data">
         {section.data?.customData.data &&
             section.data?.customData.data.map((d: any, index: number) => (
-                <div key={index} className={`content ${(index + 1) % 2 === 0 ? 'even' : ''}`}>
+                <div key={index} className={`content ${((index + 1) == 2 || (index + 1) == 5) ? 'even' : ''}`}>
                   <div className="corner" style={{ backgroundImage: `url(${d.image})` }}></div>
                   <div className="text">
                      {LanguageObject.getValue(d.text, locale)}
