@@ -22,7 +22,7 @@
 
       .content {
         p {
-          @apply  text-xl text-greydark-500;
+
         }
       }
     }
@@ -37,7 +37,7 @@
         background: #FFFFFF 0% 0% no-repeat padding-box;
         box-shadow: 0px 10px 30px #4B2D2F1A;
         font-size: 16px;
-        @apply bg-white text-greydark-500 p-9 flex flex-col justify-end items-center relative;
+        @apply bg-white  p-9 flex flex-col justify-end items-center relative;
         transform: translateY(20%);
 
         &.even {

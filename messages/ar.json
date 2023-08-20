@@ -26,12 +26,12 @@
     "search-news": "البحث عن الأخبار"
   },
   "ContactUs": {
-    "stay_in_touche": "ابق على إتصال",
+    "stay_in_touche": "ابق على تواصل",
     "get_direction": "احصل على الاتجاهات",
     "name": "الإسم",
     "email": "البريد الإلكتروني",
     "message": "الرسالة",
-    "send": "إاسال",
+    "send": "إرسال",
     "name_required": "الإسم مطلوب",
     "email_required": "البريد الإلكتروني مطلوب",
     "email_invalid": "البريد الإلكتروني غير صحيح",

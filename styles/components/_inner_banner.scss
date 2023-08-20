@@ -6,8 +6,13 @@
     @apply text-white;
     font-size: 60px;
     font-weight: bold;
-   @apply tracking-[-3px] rtl:tracking-normal capitalize;
+    @apply tracking-[-3px] rtl:tracking-normal capitalize;
     line-height: 0.95;
+
+  }
+
+  .intro {
+    @apply text-white my-8 hidden sm:block;
   }
 
   &.with-image {
@@ -39,11 +44,12 @@
 
 .inner-baner-below-title {
   @apply mb-20 flex flex-row gap-4 items-center justify-start;
+
   h2 {
     @apply text-primary-500;
     font-size: 60px;
     font-weight: bold;
-   @apply tracking-[-3px] rtl:tracking-normal;
+    @apply tracking-[-3px] rtl:tracking-normal;
     line-height: 0.95;
   }
 }

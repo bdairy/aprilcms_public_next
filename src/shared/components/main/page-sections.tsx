@@ -25,6 +25,7 @@ import NewsDetails from '../news/news-details/news-details';
 import ContactUs from '../contact-us/contact-us';
 import TeamMembers from '../team-members/team-members';
 import SearchWebsite from '../search/search';
+import InnerBannerWithIntro from '../banners/inner-banner-with-intro';
 
 export default function PageSections(params: {
   page: IPage;
@@ -46,6 +47,9 @@ export default function PageSections(params: {
         break;
       case 'inline-banner-with-image':
         element = { id: section.id, element: <InnerBannerWithImage section={section} /> };
+        break;
+      case 'apple_inner_banner':
+        element = { id: section.id, element: <InnerBannerWithIntro section={section} /> };
         break;
       case 'statistics':
         element = {
