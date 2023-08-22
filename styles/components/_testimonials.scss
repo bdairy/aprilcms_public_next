@@ -43,7 +43,7 @@
           @apply flex flex-col justify-center items-start;
           padding: 32px;
           .body {
-              @apply text-black text-xl mb-8;
+              @apply text-black text-xl mb-8 rtl:text-right w-full;
           }
 
             .name {
