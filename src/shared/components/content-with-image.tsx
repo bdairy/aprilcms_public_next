@@ -58,7 +58,7 @@ export default function ContentWithImage(params: {
           {hasTitle && <h2 className="title">{section.data!.title}</h2>}
           <span dangerouslySetInnerHTML={{ __html: section.data!.body ?? '' }}></span>
           {section.data!.link && (
-            <Link className="btn-txt primary" href={section.data!.link}>
+            <Link className="btn-txt primary" href={`/${section.data!.link}`}  >
               {section.data!.linkTitle}
             </Link>
           )}

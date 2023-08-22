@@ -22,7 +22,7 @@ export default async function PagesSearchResult(params: {
       currentItems.splice(0,5).map((item) => (
         <div className="item" key={item.id}>
           <div className="icon"></div>
-          <Link key={item.id} className='name' href={item.state} locale={locale}>
+          <Link key={item.id} className='name' href={`/${item.state}`} locale={locale}>
             {item.title}
           </Link>
         </div>

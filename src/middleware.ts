@@ -18,7 +18,8 @@ export default async function middleware(request: NextRequest) {
   // Step 2: Create and call the next-intl middleware
   const handleI18nRouting = createIntlMiddleware({
     locales: ['en', 'ar'],
-    defaultLocale
+    defaultLocale,
+
   });
   const response = handleI18nRouting(request);
 
