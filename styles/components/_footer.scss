@@ -8,12 +8,16 @@
     @apply flex flex-col gap-16;
 
     .logo {
-      background: url('/images/logo-white.svg');
+      // background: url('/images/logo-white.svg');
       height: 47px;
-      width: 262px;
+
       background-repeat: no-repeat;
       background-position: center;
       background-size: contain;
+      @apply bg-[url('/images/logo-white.svg')]
+       rtl:bg-[url('/images/logo-white-ar.svg')]
+       w-[262px] rtl:w-[209px]
+       ;
 
 
     }
