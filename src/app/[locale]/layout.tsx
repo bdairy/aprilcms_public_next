@@ -8,10 +8,10 @@ import { Metadata } from 'next';
 export const metadata: Metadata = {
   metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL ?? ''),
   title: {
-    default: 'Al Ain Academy',
-    template: '%s - Al Ain Academy',
+    default: 'Al Ain Educational Investments',
+    template: '%s - Al Ain Educational Investments',
   },
-  description: 'Al Ain Academy',
+  description: 'Al Ain Educational Investments',
   alternates: {
     languages: {
       ar: '/ar',
@@ -22,11 +22,11 @@ export const metadata: Metadata = {
     type: 'website',
     url: new URL(process.env.NEXT_PUBLIC_SITE_URL ?? ''),
     title: {
-      default: 'Al Ain Academy',
-      template: '%s - Al Ain Academy',
+      default: 'Al Ain Educational Investments',
+      template: '%s - Al Ain Educational Investments',
     },
-    description: 'Al Ain Academy ',
-    siteName: 'Al Ain Academy',
+    description: 'Al Ain Educational Investments ',
+    siteName: 'Al Ain Educational Investments',
     images: [
       {
         url: '/images/logo-main.svg',

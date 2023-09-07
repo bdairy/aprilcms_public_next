@@ -56,7 +56,7 @@ export async function generateMetadata({
               url: `/latest_updates/news_details?${id}`,
               title: article?.title,
               description: article?.introduction ?? '',
-              siteName: 'Al Ain Academy',
+              siteName: 'Al Ain Educational Investments',
               images: [
                 {
                   url: article?.image ?? '',
@@ -125,7 +125,7 @@ export async function generateMetadata({
             title: page.metaTags?.title ?? '',
             description: page.metaTags?.description ?? '',
 
-            siteName: 'Al Ain Academy',
+            siteName: 'Al Ain Educational Investments',
             images: [
               {
                 url: page.coverImageUrl ?? '',
