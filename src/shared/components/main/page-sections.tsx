@@ -26,6 +26,7 @@ import ContactUs from '../contact-us/contact-us';
 import TeamMembers from '../team-members/team-members';
 import SearchWebsite from '../search/search';
 import InnerBannerWithIntro from '../banners/inner-banner-with-intro';
+import AppleSupportOffering from '../apple_support_offering';
 
 export default function PageSections(params: {
   page: IPage;
@@ -135,6 +136,12 @@ export default function PageSections(params: {
         element = {
           id: section.id,
           element: <TrainingAchievementList locale={locale} section={section} />,
+        };
+        break;
+      case 'apple_support_offering':
+        element = {
+          id: section.id,
+          element: <AppleSupportOffering locale={locale} section={section} />,
         };
         break;
       case 'training_statistics':
