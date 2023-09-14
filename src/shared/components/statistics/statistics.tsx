@@ -5,7 +5,7 @@ import StatElement from './stat-element';
 export default async function StatisticsComponent(params: { page: IPage; locale: string; classes: string }) {
   const { page, locale, classes } = params;
   const service = new StatisticsService();
-  const stats = await service.getStatisticsByPageCode(page.code, params.locale);
+  const stats = await service.getStatisticsByPageCode(page.state, params.locale);
 
   return (<div className={`statistics ${classes ?? ''}`} >
     {stats &&
