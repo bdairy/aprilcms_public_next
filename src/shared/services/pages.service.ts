@@ -42,4 +42,25 @@ export class PagesService {
       throw error;
     }
   }
+
+  async getSiteMap(locale: string): Promise<IPage[] | null> {
+    let pages = await this.search(locale, '', 500);
+    if (!pages) {
+      return null;
+    }
+    let result = pages.filter((p) => {
+      return p.code !== 'service_details';
+    });
+
+    result.sort((a, b) => a.title.localeCompare(b.title));
+
+    let sorted: IPage[] = result.filter((f) => f.parentId === null);
+    let finalResult: IPage[] = [];
+    sorted.forEach((p) => {
+      finalResult.push(p);
+    finalResult =  finalResult.concat(result.filter((r) => r.parentId == p.id));
+    });
+
+    return finalResult;
+  }
 }

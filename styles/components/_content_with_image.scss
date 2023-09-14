@@ -6,11 +6,11 @@
 
   &.sliced{
     height: 874px;
-    .content{
-      h2{
-        width: 300px;
-      }
-    }
+    // .content{
+    //   h2{
+    //      width: 300px;
+    //   }
+    // }
   }
 
   &.text-on-the-left{
@@ -95,6 +95,7 @@
 
     p {
       letter-spacing: 0;
+      margin-bottom: 16px;
     }
     ul {
 

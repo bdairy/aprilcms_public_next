@@ -17,7 +17,7 @@ export default function AcademyValues(params: { section: ISection; locale: strin
     {section.data?.customData.data &&
             section.data?.customData.data.map((d: any, index: number) => (
               <div key={index} className="content" >
-                 <div className="corner"></div>
+                 {/* <div className="corner"></div> */}
                 {LanguageObject.getValue(d.text, locale)}
 
               </div>

@@ -1,0 +1,25 @@
+.site-map {
+  .pages-list {
+    .item {
+      @apply flex flex-row gap-2 items-center justify-start;
+
+      &.parent {
+        .name {
+
+          @apply text-primary-500 ;
+        }
+
+      }
+
+      .icon {
+        @apply w-[10px] h-2 bg-no-repeat bg-contain rtl:rotate-180;
+        background-image: url('/images/icons/chev-forward-primary.svg');
+      }
+
+      .name {
+        @apply underline;
+      }
+    }
+  }
+
+}

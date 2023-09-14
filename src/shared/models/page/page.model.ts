@@ -25,14 +25,15 @@ export interface IPage {
   template: IPageTemplate;
   sections: ISection[];
   coverImageUrl: string | null;
+  parentId: any;
 }
 export class Page {
   static fromEntityResult(entity: any): IPage {
     let getState = (page: any) => {
       if (page.parent && page.parent.code) {
-        return `${page.parent.code}/${entity.state ?? entity.url}`;
+        return `${page.parent.code}/${entity.code ?? entity.url}`;
       } else {
-        return entity.state ?? entity.url;
+        return  entity.code;
       }
     };
     const p: IPage = {
@@ -40,10 +41,11 @@ export class Page {
       coverImageUrl: entity.coverImageUrl,
       metaTags: entity.metaTags ? MetaTags.fromEntityResult(entity.metaTags) : null,
       sections: Section.fromEntityListResult(entity.sections),
-      code: entity.state ?? entity.url,
+      code: entity.state ?? entity.url.replace('&', 'and'),
       state: getState(entity),
       title: entity.title,
       template: entity.pageTemplate,
+      parentId:  entity.parent && entity.parent.id !== '00000000-0000-0000-0000-000000000000' ? entity.parent.id : null
     };
     return p;
   }

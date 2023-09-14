@@ -6,12 +6,13 @@
     @apply flex h-full flex-col mx-auto items-center justify-center mt-24;
 
     .title {
-      width: auto;
+
+      @apply w-[664px];
 
       h2 {
         font-size: 60px;
         font-weight: bold;
-       @apply tracking-[-3px] rtl:tracking-normal;
+        @apply tracking-[-3px] rtl:tracking-normal text-start w-full;
         line-height: 0.95;
         margin-bottom: 37px;
       }
@@ -21,7 +22,7 @@
       width: 664px;
 
       p {
-        @apply   text-justify   ;
+        @apply text-justify;
       }
     }
 
@@ -34,7 +35,7 @@
         background: #FFFFFF 0% 0% no-repeat padding-box;
         box-shadow: 0px 10px 30px #4B2D2F1A;
         font-size: 16px;
-        @apply bg-white p-9 flex flex-col justify-end items-center relative;
+        @apply bg-white p-9 flex flex-col justify-center items-center relative;
 
         .corner {
           position: absolute;
@@ -73,6 +74,7 @@
 
       .data {
         @apply mb-16;
+
         .content {
           width: 100%;
           aspect-ratio: unset;

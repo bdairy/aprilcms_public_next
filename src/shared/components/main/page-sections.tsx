@@ -28,6 +28,7 @@ import SearchWebsite from '../search/search';
 import InnerBannerWithIntro from '../banners/inner-banner-with-intro';
 import AppleSupportOffering from '../apple_support_offering';
 
+
 export default function PageSections(params: {
   page: IPage;
   locale: string;
@@ -180,6 +181,7 @@ export default function PageSections(params: {
           element: <SearchWebsite  locale={locale} searchParams={searchParams ?? {}} />,
         };
         break;
+
 
       default:
         element = {
