@@ -27,14 +27,14 @@ import TeamMembers from '../team-members/team-members';
 import SearchWebsite from '../search/search';
 import InnerBannerWithIntro from '../banners/inner-banner-with-intro';
 import AppleSupportOffering from '../apple_support_offering';
-
+import EdExcellenceFeatures from '../training_center/ed_excellence_features';
 
 export default function PageSections(params: {
   page: IPage;
   locale: string;
   codes: string[];
   id: string | null;
-  searchParams?:any;
+  searchParams?: any;
 }) {
   const { locale, page, codes, id, searchParams } = params;
   let sections: any[] = [];
@@ -139,6 +139,12 @@ export default function PageSections(params: {
           element: <TrainingAchievementList locale={locale} section={section} />,
         };
         break;
+      case 'ed-excellence-features':
+        element = {
+          id: section.id,
+          element: <EdExcellenceFeatures locale={locale} section={section} />,
+        };
+        break;
       case 'apple_support_offering':
         element = {
           id: section.id,
@@ -172,16 +178,15 @@ export default function PageSections(params: {
       case 'contact_us':
         element = {
           id: section.id,
-          element: <ContactUs  locale={locale} />,
+          element: <ContactUs locale={locale} />,
         };
         break;
       case 'search':
         element = {
           id: section.id,
-          element: <SearchWebsite  locale={locale} searchParams={searchParams ?? {}} />,
+          element: <SearchWebsite locale={locale} searchParams={searchParams ?? {}} />,
         };
         break;
-
 
       default:
         element = {

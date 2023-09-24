@@ -23,7 +23,7 @@ export default function BasicContent(params: {
     transition={{ duration: 0.6 }} className="basic-content container">
       {hasTitle && <h2 className="title">{section.data?.title}</h2>}
 
-      <div className="body" dangerouslySetInnerHTML={{ __html: section.data!.body ?? '' }}></div>
+      <div className="body" dangerouslySetInnerHTML={{ __html: section.data!.body?.replaceAll('--', '') ?? '' }}></div>
       {section.data?.link && (
       <Link href={`/${section.data!.link}`} className="text-primary-500 cursor-pointer" locale={locale}>
           {section.data?.linkTitle}
