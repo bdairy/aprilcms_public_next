@@ -1,0 +1,183 @@
+.career-details {
+
+  .career-header {
+    @apply h-auto w-full flex flex-col gap-11 items-start justify-start relative mb-4;
+
+    .bg {
+      @apply absolute hidden sm:block bg-beige-500 w-full h-[460px] top-0 left-0 z-0;
+    }
+
+    .bread-crumb {
+      @apply bg-beige-900 h-[50px] w-full z-10;
+
+      .links-wrapper {
+
+        @apply flex flex-row justify-start items-center h-full gap-2 z-10;
+
+        .crumb {
+          @apply flex flex-row items-center gap-2;
+
+          .link {
+
+            @apply text-[16px] text-greydark-500;
+
+            &.active {
+              @apply text-primary-500 hidden sm:flex;
+            }
+          }
+
+          .chev {
+            width: 7px;
+            height: 12px;
+
+            background-image: url('/images/icons/breadcrumb-chev-right.svg');
+            background-repeat: no-repeat;
+            background-size: contain;
+            @apply rtl:rotate-180 inline-block mx-2;
+          }
+        }
+      }
+    }
+
+    .date-row {
+      @apply flex flex-row justify-between items-center z-10;
+
+      .date {
+        @apply text-lg text-greydark-500;
+      }
+
+      .share {
+        @apply flex flex-row items-center justify-between gap-8;
+
+        span {
+          @apply text-lg text-greydark-500 hidden sm:flex;
+        }
+
+        .icon {
+
+          img {
+            object-fit: contain;
+
+
+
+          }
+        }
+      }
+    }
+
+    .title {
+      @apply z-10;
+
+      h2 {
+        @apply text-primary-900;
+        font-size: 60px;
+        font-weight: bold;
+        @apply tracking-[-3px] rtl:tracking-normal;
+        line-height: 0.95;
+      }
+    }
+
+    .number {
+      @apply z-10;
+
+      h2 {
+        @apply text-2xl font-bold rtl:tracking-normal;
+
+      }
+    }
+
+
+    .image {
+      @apply z-10;
+
+      img {
+        @apply sm:max-w-xl h-auto w-full;
+      }
+    }
+
+    .category {
+      @apply text-primary-500 text-lg font-bold mb-8;
+
+    }
+
+  }
+
+  .section-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 33px;
+  }
+
+
+
+
+  .service-body {
+    // @apply text-greydark-500 text-xl;
+    letter-spacing: 0;
+    @apply text-xl mb-8;
+
+    p {
+      @apply mb-4;
+    }
+
+    .ql-indent-1 {
+      @apply ml-4 rtl:ml-0 rtl:mr-4;
+    }
+
+    ul {
+
+      li {
+
+
+        &::before {
+          content: "\2022";
+          /* Add content: \2022 is the CSS Code/unicode for a bullet */
+          @apply text-primary-500 ml-[-1em] rtl:ml-0 rtl:mr-[-1em];
+          /* Change the color */
+          font-weight: bold;
+          /* If you want it to be bold */
+          display: inline-block;
+          /* Needed to add space between the bullet and the text */
+          width: 1em;
+          /* Also needed for space (tweak if needed) */
+          margin-left: -1em;
+          /* Also needed for space (tweak if needed) */
+        }
+      }
+    }
+
+    ol {
+
+      li {
+
+        ul {
+          @apply ml-4 rtl:ml-0 rtl:mr-4;
+        }
+
+        &::before {
+          content: "\2022";
+          /* Add content: \2022 is the CSS Code/unicode for a bullet */
+          @apply text-primary-500 ml-[-1em] rtl:ml-0 rtl:mr-[-1em];
+          /* Change the color */
+          font-weight: bold;
+          /* If you want it to be bold */
+          display: inline-block;
+          /* Needed to add space between the bullet and the text */
+          width: 1em;
+          /* Also needed for space (tweak if needed) */
+
+          /* Also needed for space (tweak if needed) */
+        }
+      }
+    }
+
+  }
+
+  .apply-button {
+    @apply h-[55px] w-[200px] mb-10 block border-primary-500 text-primary-500 outline-none border-[1px] font-semibold rounded-md text-[16px] px-4 py-4 text-center;
+
+    &.disabled {
+      @apply bg-gray-200 cursor-default;
+    }
+  }
+}

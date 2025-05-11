@@ -2,6 +2,7 @@ import { OurServicesService } from '@/shared/services/our-services.service';
 import Image from 'next/image';
 import { notFound } from 'next/navigation';
 import BreadCrumb from '../breadcrumb';
+import { getTranslations } from 'next-intl/server';
 
 export default async function ServiceDetails(params: {
   locale: string;
@@ -10,6 +11,8 @@ export default async function ServiceDetails(params: {
 }) {
   const { id, locale, codes } = params;
   const service = new OurServicesService();
+  const t = await getTranslations('Index');
+
   if (!id) {
     return notFound();
   }
@@ -22,9 +25,9 @@ export default async function ServiceDetails(params: {
       <div className="service-header">
         <div className="bg"></div>
         <BreadCrumb
-          codes={['about', 'our_services']}
+          codes={[ 'about/our_services', 'service_details']}
           locale={locale}
-          routeNames={['our_services', serviceDetails.name]}></BreadCrumb>
+          routeNames={[ t('our_services'), serviceDetails.name]}></BreadCrumb>
         <div className="title container">
           <h2>{serviceDetails.name}</h2>
         </div>

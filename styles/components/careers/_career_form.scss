@@ -1,0 +1,31 @@
+.career-form {
+  @apply w-8/12 flex flex-col gap-4 items-start justify-start;
+
+  .form-field {
+
+    @apply w-full flex flex-col gap-2 items-start justify-start;
+
+    .label {
+      @apply text-[16px] text-greydark-500;
+    }
+
+    input,
+    select {
+      @apply w-full h-[50px] bg-white border border-greydark-200 rounded-lg px-4 text-[16px] text-greydark-500;
+
+      &.error {
+        @apply border-red-500;
+      }
+    }
+  }
+
+  .apply-button {
+    @apply h-[55px] w-[200px] mb-10 block border-primary-500 text-primary-500 outline-none border-[1px] font-semibold rounded-md text-[16px] px-4 py-4 text-center;
+
+    &.disabled {
+      @apply bg-gray-200 cursor-default;
+    }
+  }
+
+
+}

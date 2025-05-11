@@ -6,8 +6,10 @@ export class ApiService {
 
   async getData(url: string, options: any, revalidate: number = this.revalidateTime) {
     try {
-      const result = await fetch(`${this.root}${url}`,
-        {  next: {revalidate: revalidate}, headers: options });
+      const result = await fetch(`${this.root}${url}`, {
+        next: { revalidate: revalidate },
+        headers: options,
+      });
 
       const res = await result.json();
       return res;
@@ -27,7 +29,25 @@ export class ApiService {
         body: JSON.stringify(data),
       });
 
-      const res = result;//await result.json();
+      const res = result; //await result.json();
+      if (res.status > 299) {
+        throw res;
+      }
+      return res;
+    } catch (error) {
+      throw error;
+    }
+  }
+  async postFormData(url: string, data: any, options: any) {
+    try {
+      //  Object.assign(options, { 'Accept': '*/*', 'Content-Type': 'application/json' });
+      //   let headers: OutgoingHttpHeader = new OutGoin;
+      const result = await fetch(`${this.root}${url}`, {
+        method: 'POST',
+        body: data,
+      });
+
+      const res = result; //await result.json();
       if (res.status > 299) {
         throw res;
       }

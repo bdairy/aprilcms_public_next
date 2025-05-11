@@ -1,0 +1,23 @@
+.vacancy-card-block {
+  @apply bg-white shadow-xl pt-[45px] pb-[36px] pl-[37px] pr-[51px] text-greydark-500 rounded-[14px];
+
+  .title {
+    @apply text-2xl leading-7 text-black mb-[30px] font-bold;
+  }
+
+  .description {
+    @apply text-base leading-5 line-clamp-3 mb-[30px];
+    overflow: hidden;
+    display: -webkit-box;
+    text-overflow: ellipsis;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+  }
+
+  .link {
+    @apply flex items-center gap-x-[18px] mt-3 lg:mt-6;
+  }
+  svg {
+    @apply rtl:rotate-180;
+  }
+}
