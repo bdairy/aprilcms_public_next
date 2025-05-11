@@ -28,6 +28,9 @@ import SearchWebsite from '../search/search';
 import InnerBannerWithIntro from '../banners/inner-banner-with-intro';
 import AppleSupportOffering from '../apple_support_offering';
 import EdExcellenceFeatures from '../training_center/ed_excellence_features';
+import CareersList from '@/shared/components/careers/careers_list';
+import CareerDetails from '@/shared/components/careers/career_details';
+import CareerApply from '../careers/career_apply';
 
 export default function PageSections(params: {
   page: IPage;
@@ -175,6 +178,24 @@ export default function PageSections(params: {
           element: <NewsDetails codes={codes} locale={locale} id={id} />,
         };
         break;
+      case 'careers_list':
+        element = {
+          id: section.id,
+          element: <CareersList codes={codes} section={section}  locale={locale} searchParams={searchParams ?? {}} />,
+        };
+        break;
+        case 'career_details':
+          element = {
+            id: section.id,
+            element: <CareerDetails codes={codes} locale={locale} id={id} />,
+          };
+          break;
+        case 'career_apply':
+          element = {
+            id: section.id,
+            element: <CareerApply codes={codes} locale={locale} id={id} />,
+          };
+          break;
       case 'contact_us':
         element = {
           id: section.id,

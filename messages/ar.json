@@ -11,7 +11,8 @@
     "latest_updates": "آخر الأخبار",
     "no_records": "لم نستطع ايجاد اي نتائج تطابق بحثك",
     "follow_us": "تابعنا",
-    "team_members": "أعضاء الفريق"
+    "team_members": "أعضاء الفريق",
+    "careers": "الوظائف"
 
   },
   "About":{
@@ -45,5 +46,39 @@
     "search-website-input": "ابدأ الكتابة",
     "pages": "صفحات الموقع",
     "news": "الأخبار"
+  },
+  "careers":{
+    "apply_now": "قدم الآن",
+    "responsibilities": "المسؤوليات",
+    "additionalInfo": "معلومات إضافية",
+    "job_overview": "وصف الوظيفة",
+    "view_details": "عرض التفاصيل"
+  },
+  "careers_form":{
+    "first_name": "الإسم الأول",
+    "last_name": "الإسم الأخير",
+    "email": "البريد الإلكتروني",
+    "phone": "رقم الهاتف",
+    "cv": "السيرة الذاتية",
+    "cover_letter": "خطاب التقديم",
+    "apply_now": "تقديم الطلب",
+    "first_name_required": "الإسم الأول مطلوب",
+    "last_name_required": "الإسم الأخير مطلوب",
+    "email_required": "البريد الإلكتروني مطلوب",
+    "email_invalid": "البريد الإلكتروني غير صحيح",
+    "phone_required": "رقم الهاتف مطلوب",
+    "cv_required": "السيرة الذاتية مطلوبة",
+    "cv_invalid": "السيرة الذاتية غير صحيحة",
+    "cover_letter_required": "خطاب التقديم مطلوب",
+    "cover_letter_invalid": "خطاب التقديم غير صحيح",
+    "success": "طلبك تم إرساله بنجاح",
+    "error": "حدث خطأ ما، الرجاء المحاولة مرة أخرى",
+    "joining_date": "تاريخ الانضمام",
+    "visa_status": "هل لديك تأشيرة صالحة في الإمارات",
+    "has_education_certificate": "هل لديك شهادة تعليمية",
+    "select_joining_date": "اختر تاريخ الانضمام",
+    "yes": "نعم",
+    "no": "لا"
+
   }
 }

@@ -11,17 +11,17 @@
     "latest_updates": "Latest updates",
     "no_records": "We could not find any result matches your search crieteria",
     "follow_us": "Follow us",
-    "team_members": "Team Members"
-
+    "team_members": "Team Members",
+    "careers": "Careers"
   },
-  "About":{
+  "About": {
     "our_principles": "Our Principles"
   },
-  "TrainingCenter":{
+  "TrainingCenter": {
     "our_services": "Our Services",
     "click_achievements": "Click to see our achievements"
   },
-  "News":{
+  "News": {
     "all-news": "All News",
     "search-news": "Search for news"
   },
@@ -39,13 +39,44 @@
     "message_invalid": "Invalid message, minimum length is 20 characters",
     "success": "Request is sent successfully",
     "error": "Something went wrong, please try again later"
-
   },
   "Search": {
     "search-website-title": "Search Website",
     "search-website-input": "Type anything",
     "pages": "Pages",
     "news": "News"
+  },
+  "careers": {
+    "apply_now": "Apply Now",
+    "responsibilities": "Responsibilities",
+    "additionalInfo": "Additional Information",
+    "job_overview": "Job Overview",
+    "view_details": "View Details"
+  },
+  "careers_form":{
+    "first_name": "First Name",
+    "last_name": "Last Name",
+    "email": "Email",
+    "phone": "Phone Number",
+    "cv": "CV",
+    "cover_letter": "Cover Letter",
+    "apply_now": "Apply Now",
+    "first_name_required": "First Name is required",
+    "last_name_required": "Last Name is required",
+    "email_required": "Email is required",
+    "email_invalid": "Email is invalid",
+    "phone_required": "Phone Number is required",
+    "cv_required": "CV is required",
+    "cv_invalid": "CV is invalid",
+    "cover_letter_required": "Cover Letter is required",
+    "cover_letter_invalid": "Cover Letter is invalid",
+    "success": "Your application has been submitted successfully",
+    "error": "Something went wrong, please try again later",
+    "joining_date": "Joining Date",
+    "visa_status": "Has a valid UAE visa",
+    "has_education_certificate": "Has Education Certificate",
+    "select_joining_date": "Select Joining Date",
+    "yes": "Yes",
+    "no": "No"
   }
-
 }

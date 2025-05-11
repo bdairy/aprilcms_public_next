@@ -14,22 +14,27 @@
 
         @apply flex flex-row justify-start items-center h-full gap-2 z-10;
 
-        .link {
+        .crumb {
+          @apply flex flex-row items-center gap-2;
 
-          @apply text-[16px] text-greydark-500;
+          .link {
 
-          &.active {
-            @apply text-primary-500 hidden sm:flex;
+            @apply text-[16px] text-greydark-500;
+
+            &.active {
+              @apply text-primary-500 hidden sm:flex;
+            }
           }
-        }
 
-        .chev {
-          width: 7px;
-          height: 12px;
-          background-image: url('/images/icons/breadcrumb-chev-right.svg');
-          background-repeat: no-repeat;
-          background-size: contain;
-          @apply rtl:rotate-180;
+          .chev {
+            width: 7px;
+            height: 12px;
+
+            background-image: url('/images/icons/breadcrumb-chev-right.svg');
+            background-repeat: no-repeat;
+            background-size: contain;
+            @apply rtl:rotate-180 inline-block mx-2;
+          }
         }
       }
     }
