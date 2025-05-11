@@ -30,7 +30,7 @@ export default async function ContactUs(params: { locale: string }) {
   return (
     <Fragment>
       <div className="contact-cards container">
-        <div className="contact-card">
+        {/* <div className="contact-card">
           <div className="group single">
             <h3 className="title">{contacts[0].title}</h3>
             <div
@@ -39,17 +39,22 @@ export default async function ContactUs(params: { locale: string }) {
                 __html: contacts[0].value.replaceAll('..', '<br/>'),
               }}></div>
           </div>
-        </div>
-        <div className="contact-card">
-          {contacts.slice(1, 3).map((item, index) => (
+        </div> */}
+        <div className="contact-card h-[312px]">
+          {contacts.map((item, index) => (
             <div key={index} className="group">
               <h3 className="title">{item.title}</h3>
-              <p className="value" dir='ltr'>{item.value}</p>
+              {/* <p className="value" dir='ltr'>{item.value}</p> */}
+              <div
+              className="value"
+              dangerouslySetInnerHTML={{
+                __html: item.value.replaceAll('..', '<br/>'),
+              }}></div>
             </div>
           ))}
         </div>
+       <div className="contact-card h-[500px]"><ContactForm position={position} locale={params.locale}></ContactForm></div>
       </div>
-      <ContactForm position={position} locale={params.locale}></ContactForm>
     </Fragment>
   );
 }
