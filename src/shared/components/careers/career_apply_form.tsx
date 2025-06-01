@@ -57,9 +57,9 @@ export default function CareerApplyForm(params: {
       }
 
       try {
-        const token = await executeRecaptcha('career_apply');
+        const token = await executeRecaptcha('signup');
 
-        Object.assign(data, { token: token });
+        Object.assign(data, { reCaptchaToken: token });
         Object.assign(data, { jobId: careerId });
         const service = new CareersService();
         await service.applyCareer(data);
@@ -87,7 +87,7 @@ export default function CareerApplyForm(params: {
         setLoading(false);
       }
     },
-    [executeRecaptcha, reset, careerId]
+    [executeRecaptcha, careerId, reset, t, router]
   );
   return (
     <form onSubmit={handleSubmit(handleSubmitContact)}>
@@ -246,7 +246,7 @@ export default function CareerApplyForm(params: {
           label="Upload CV"
           accept=".pdf,.doc,.docx"
           required
-          error={errors.cvFile?.message}
+        //  error={errors.cvFile?.message}
         />
         <RHFileUpload
           name="coverLetterFile"
@@ -254,7 +254,7 @@ export default function CareerApplyForm(params: {
           label="Upload Cover Letter"
           accept=".pdf,.doc,.docx"
           required
-          error={errors.coverLetterFile?.message}
+         // error={errors.coverLetterFile?.message}
         />
         {!loading && (
           <button

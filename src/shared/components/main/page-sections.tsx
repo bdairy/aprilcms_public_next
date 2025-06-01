@@ -31,6 +31,7 @@ import EdExcellenceFeatures from '../training_center/ed_excellence_features';
 import CareersList from '@/shared/components/careers/careers_list';
 import CareerDetails from '@/shared/components/careers/career_details';
 import CareerApply from '../careers/career_apply';
+import CareersWrapper from '../careers/careers_wrapper';
 
 export default function PageSections(params: {
   page: IPage;
@@ -181,7 +182,7 @@ export default function PageSections(params: {
       case 'careers_list':
         element = {
           id: section.id,
-          element: <CareersList codes={codes} section={section}  locale={locale} searchParams={searchParams ?? {}} />,
+          element: <CareersWrapper codes={codes} section={section}  locale={locale} searchParams={searchParams ?? {}} />,
         };
         break;
         case 'career_details':

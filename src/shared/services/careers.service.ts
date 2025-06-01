@@ -4,13 +4,14 @@ import { CareersItem, ICareersItem } from '../models/careers/career-item';
 import { ApiService } from './api.service';
 import { JobApplicationCommand } from '../commands/apply-career.commnd';
 import { IJoiningDate, JoiningDate } from '../models/careers/joining-date.model';
+import { CareerTarget, ICareerTarget } from '../models/careers/career-target';
 
 export class CareersService {
   root = 'careers';
   revalidateTime = 0;
 
   async getCareers(
-    referenceType: string,
+    categoryId: number | null = null,
     pageIndex: number = 1,
     pageSize: number = 4,
     locale: string
@@ -18,7 +19,7 @@ export class CareersService {
     try {
       const api = new ApiService();
       const result = await api.getData(
-        `${this.root}/job-posting?ReferenceType=${referenceType}&PageIndex=${pageIndex}&PageSize=${pageSize}`,
+        `${this.root}/job-posting?CategoryId=${categoryId ?? ''}&PageIndex=${pageIndex}&PageSize=${pageSize}`,
         { 'Accept-Language': locale },
         this.revalidateTime
       );
@@ -102,6 +103,25 @@ export class CareersService {
       );
       if (result) {
         return JoiningDate.fromEntityListResult(result);
+      } else {
+        return null;
+      }
+    } catch (error) {
+      throw error;
+    }
+  }
+  async getCareerTargets(locale: string): Promise<ICareerTarget[] | null> {
+    try {
+      const api = new ApiService();
+      const result = await api.getData(
+        `${this.root}/lookups/job-posting-category`,
+        {
+          'Accept-Language': locale,
+        },
+        this.revalidateTime
+      );
+      if (result) {
+        return  CareerTarget.fromEntityListResult(result);
       } else {
         return null;
       }
