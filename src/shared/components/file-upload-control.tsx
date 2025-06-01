@@ -7,7 +7,6 @@ interface RHFileUploadProps {
   label?: string;
   accept?: string;
   required?: boolean;
-  error?: string;
 }
 
 const RHFileUpload: React.FC<RHFileUploadProps> = ({
@@ -16,7 +15,6 @@ const RHFileUpload: React.FC<RHFileUploadProps> = ({
   label,
   accept = '',
   required = false,
-  error,
 }) => {
   return (
     <div className="mb-4">
@@ -24,19 +22,27 @@ const RHFileUpload: React.FC<RHFileUploadProps> = ({
       <Controller
         name={name}
         control={control}
-        rules={{ required }}
-        render={({ field }) => (
-          <input
-            type="file"
-            accept={accept}
-            onChange={(e) => field.onChange(e.target.files?.[0])}
-            className={`border px-3 py-2 w-full rounded ${
-              error ? 'border-red-500' : ''
-            }`}
-          />
+        rules={{
+          required: required ? 'This file is required' : false,
+        }}
+        render={({ field, fieldState }) => (
+          <>
+            <input
+              type="file"
+              accept={accept}
+              onChange={(e) => field.onChange(e.target.files?.[0] ?? null)}
+              className={`border px-3 py-2 w-full rounded ${
+                fieldState.error ? 'border-red-500' : ''
+              }`}
+            />
+            {fieldState.error && (
+              <div className="text-red-500 text-sm mt-1">
+                {fieldState.error.message}
+              </div>
+            )}
+          </>
         )}
       />
-      {error && <div className="text-red-500 text-sm mt-1">{error}</div>}
     </div>
   );
 };

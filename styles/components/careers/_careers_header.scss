@@ -1,0 +1,29 @@
+
+ .careers-list-header{
+  @apply flex flex-row justify-end items-center ;
+ .tabs-container {
+        @apply w-full sm:w-fit flex justify-between sm:justify-normal items-center bg-[#f0f0f0] p-1.5 rounded-lg sm:rounded-[10px] list-none text-center;
+
+        li.tab {
+          @apply grid place-items-center h-8 sm:h-[37px] w-20 sm:w-[129px] cursor-pointer select-none relative bg-transparent;
+
+          &.green {
+            @apply text-green-500;
+          }
+          &.red {
+            @apply text-pink-500;
+          }
+          &.pink {
+            @apply text-pink-500;
+          }
+
+          p {
+            @apply text-sm xl:text-lg z-20 relative;
+          }
+
+          .animated-bg {
+            @apply absolute inset-0 rounded-lg sm:rounded-[10px] bg-white;
+          }
+        }
+      }
+    }
